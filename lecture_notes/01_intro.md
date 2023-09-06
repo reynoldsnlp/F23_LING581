@@ -5,9 +5,9 @@
 * NLP vs Computational Linguistics
 * HUGE, Interdisciplinary field
   * Linguistics (Morphology, Syntax, Phonetics/Phonology, Semantics, Discourse, etc.)
-  * Computer Science (Coding, algorithmic complexity, etc.)
+  * Computer Science (Data structures, algorithms, complexity, etc.)
   * Machine learning (Supervised algorithms, Unsupervised algorithms, cross-validation, etc.)
-  * Mathematics (Calculus, linear algebra, Graph Theory, etc.)
+  * Mathematics (calculus, linear algebra, Graph Theory, etc.)
   * Nobody knows everything about NLP.
 * Common tasks
   * Information retrieval
@@ -41,23 +41,35 @@
 ### Goals and methods
 
 * Stepping stone to becoming an NLP researcher (not just a user)
+* Coding ability is assumed (preferably Python)
 * You are an active participant in planning, teaching, discussing, etc.
 * There is a waitlist
   * If your primary motivation for reading or doing homework is the grade, please drop the class
-    * Bean-counting grade hacking is not welcome
   * If this is not a topic you can be passionate about, please drop the class
 
 * (Almost) every week...
   * Mon: Reading from textbook chapter (discussion led by assigned student)
     * Short (<5 mins) summary of chapter (slides optional)
     * Dig into important/difficult parts
+      * Math equations
+      * algorithms
+    * Find other resources that may help facilitate discussion
+      * Tutorials
+      * Images/Visualizations
+      * Youtube videos
   * Wed: Reading research article (discussion led by assigned student)
     * You can help choose the article, if desired
+    * Short (<5 mins) summary of chapter (slides optional)
+    * Dig into important/difficult parts
+    * Evaluation/criticism of article's methodology/results
   * Fri: Coding workshop applying what we learned
+    * Come having made your best effort to complete assigned exercises
+    * We will show working examples, compare solutions
+    * Expand/explore new applications
 
 * Last month of course is primarily reserved for final projects
   * Optional readings
-  * Short summary lectures/discussion
+  * Short summary lectures/discussion led by me
 
 ### Final project
 
@@ -74,9 +86,11 @@ The final exam for this course consists of either an in-class presentation
 
 ### Communication
 
-  * Learning community
+  * Learning community (including me!)
   * Learning Suite "Digital Dialog"
   * Slack, Teams, Discord, etc.?
+
+> These are difficult topics, so ask questions!!!
 
 ## Questions?
 
