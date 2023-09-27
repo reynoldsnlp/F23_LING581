@@ -99,7 +99,8 @@ print("predicted class names: ", y_test_hat_names)
 score = clf.score(X_test, y_test)
 print("Mean accuracy: ", score)
 
-print(classification_report(y_test, y_test_hat, target_names=target_names))
+report = classification_report(y_test, y_test_hat, target_names=target_names)  # output_dict=True if you want as a data structure
+print(report)
 
 ConfusionMatrixDisplay.from_predictions(y_test, y_test_hat, display_labels=target_names)
 plt.show()
