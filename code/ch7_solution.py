@@ -20,46 +20,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 
 
-nltk.download("brown")
-
-UNK_symbol = "<UNK>"
-gpu = 0
-NGRAM_SIZE = 3
-CONTEXT_SIZE = NGRAM_SIZE - 1
-EMBEDDING_DIM = 100
-HIDDEN_SIZE = 100
-BATCH_SIZE = 256
-EPOCHS = 5
-torch.manual_seed(42)
-
-
-### Build vocabulary ###
-
-# training set: first 12000 paragraphs (dev set: remaining 3000+)
-TRAIN_PARAGRAPHS = 12000
-
-train_freq = Counter()
-for i, paragraph in enumerate(brown.paras()):
-    if i == TRAIN_PARAGRAPHS:
-        break
-    for sentence in paragraph:
-        train_freq.update(word.lower() for word in sentence)
-print(train_freq.most_common(200))
-
-# create vocabulary
-vocab = set([UNK_symbol])
-for word, freq in train_freq.items():
-    if freq >= 5:
-        vocab.add(word)
-
-print("Vocab length:", len(vocab))
-
-word_to_id_mappings = {}
-for i, word in enumerate(vocab):
-    word_to_id_mappings[word] = i
-
-
-def get_id_of_word(word, unk=UNK_symbol):
+def get_id_of_word(word, unk="<UNK>"):
     """Get id of given word (<UNK> if not found)."""
     unknown_word_id = word_to_id_mappings[unk]
     return word_to_id_mappings.get(word, unknown_word_id)
@@ -89,25 +50,6 @@ def get_train_dev(corpus, ngram_size=3):
                     x_dev.append(x)
                     y_dev.append(y)
     return np.array(x_train), np.array(y_train), np.array(x_dev), np.array(y_dev)
-
-
-### Create DataLoaders ###
-
-# check if gpu is available
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-# device = 'cpu'
-available_workers = multiprocessing.cpu_count()
-
-x_train, y_train, x_dev, y_dev = get_train_dev(brown, ngram_size=3)
-print("Train shape of x and y:", x_train.shape, y_train.shape)
-print("Dev shape of x and y:", x_dev.shape, y_dev.shape)
-
-
-print(f"--- Creating training and dev dataloaders with {BATCH_SIZE} batch size ---")
-train_set = np.concatenate((x_train, y_train), axis=1)
-dev_set = np.concatenate((x_dev, y_dev), axis=1)
-train_loader = DataLoader(train_set, batch_size=BATCH_SIZE, num_workers=available_workers)
-dev_loader = DataLoader(dev_set, batch_size=BATCH_SIZE, num_workers=available_workers)
 
 
 class NPLM(nn.Module):
@@ -155,7 +97,7 @@ def evaluate(model, criterion, dataloader, gpu):
         for it, data_tensor in enumerate(dataloader):
             context_tensor = data_tensor[:, 0:CONTEXT_SIZE]
             target_tensor = data_tensor[:, CONTEXT_SIZE]
-            context_tensor, target_tensor = context_tensor.cuda(gpu), target_tensor.cuda(gpu)
+            context_tensor, target_tensor = context_tensor.to(device), target_tensor.to(device)
             log_probs = model(context_tensor)
             mean_loss += criterion(log_probs, target_tensor).item()
             mean_acc += get_accuracy_from_log_probs(log_probs, target_tensor)
@@ -170,97 +112,156 @@ def evaluate(model, criterion, dataloader, gpu):
     return mean_acc / count, mean_loss / count
 
 
-# ------------------------- TRAIN & SAVE MODEL ------------------------
+if __name__ == "__main__":
+    nltk.download("brown")
 
-# Using negative log-likelihood loss
-loss_function = nn.NLLLoss()
-
-# create model
-model = NPLM(len(vocab), EMBEDDING_DIM, CONTEXT_SIZE, HIDDEN_SIZE)
-
-# load it to gpu
-model.cuda(gpu)
-
-# using ADAM optimizer
-optimizer = optim.Adam(model.parameters(), lr=2e-3)
-
-best_acc = 0
-best_model_path = None
-for epoch in range(EPOCHS):
-    st = time.time()
-    print(f"\n--- Training model Epoch: {epoch+1} ---")
-    for it, data_tensor in enumerate(train_loader):
-        context_tensor = data_tensor[:,0:CONTEXT_SIZE]
-        target_tensor = data_tensor[:,CONTEXT_SIZE]
-
-        context_tensor, target_tensor = context_tensor.cuda(gpu), target_tensor.cuda(gpu)
-
-        # zero out the gradients from the old instance
-        model.zero_grad()
-
-        # get log probabilities over next words
-        log_probs = model(context_tensor)
-
-        # calculate current accuracy
-        acc = get_accuracy_from_log_probs(log_probs, target_tensor)
-
-        # compute loss function
-        loss = loss_function(log_probs, target_tensor)
-
-        # backward pass and update gradient
-        loss.backward()
-        optimizer.step()
-
-        if it % 500 == 0:
-            print(f"Training Iteration {it} of epoch {epoch} complete. "
-                  f"Loss: {loss.item()}; "
-                  f"Acc:{acc}; "
-                  f"Time taken (s): {time.time()-st}")
-            st = time.time()
-
-    print("\n--- Evaluating model on dev data ---")
-    dev_acc, dev_loss = evaluate(model, loss_function, dev_loader, gpu)
-    print(f"Epoch {epoch} complete! Development Accuracy: {dev_acc}; Development Loss: {dev_loss}")
-    if dev_acc > best_acc:
-        print(f"Best development accuracy improved from {best_acc} to {dev_acc}, saving model...")
-        best_acc = dev_acc
-        # set best model path
-        best_model_path = f'best_model_{epoch}.dat'
-        # saving best model
-        torch.save(model.state_dict(), best_model_path)
+    UNK_symbol = "<UNK>"
+    gpu = 0
+    NGRAM_SIZE = 3
+    CONTEXT_SIZE = NGRAM_SIZE - 1
+    EMBEDDING_DIM = 100
+    HIDDEN_SIZE = 100
+    BATCH_SIZE = 256
+    EPOCHS = 5
+    torch.manual_seed(42)
 
 
-# ---------------------- Loading Best Model -------------------
+    ### Build vocabulary ###
 
-best_model = NPLM(len(vocab), EMBEDDING_DIM, CONTEXT_SIZE, HIDDEN_SIZE)
-best_model.load_state_dict(torch.load(best_model_path))
-best_model.cuda(gpu)
+    # training set: first 12000 paragraphs (dev set: remaining 3000+)
+    TRAIN_PARAGRAPHS = 12000
 
-cos = nn.CosineSimilarity(dim=0)
+    train_freq = Counter()
+    for i, paragraph in enumerate(brown.paras()):
+        if i == TRAIN_PARAGRAPHS:
+            break
+        for sentence in paragraph:
+            train_freq.update(word.lower() for word in sentence)
+    print(train_freq.most_common(200))
 
-lm_similarities = {}
-# word pairs to calculate similarity
-words = [
-         ('computer', 'keyboard'),
-         ('war', 'peace'),
-         ('war', 'about'),
-         ('school', 'college'),
-         ('school', 'who'),
-         ('national', 'international'),
-         ('national', 'few'),
-        ]
+    # create vocabulary
+    vocab = set([UNK_symbol])
+    for word, freq in train_freq.items():
+        if freq >= 5:
+            vocab.add(word)
 
-# ----------- Calculate LM similarities using cosine similarity ----------
+    print("Vocab length:", len(vocab))
 
-for word_pair in words:
-    w1, w2 = word_pair
-    words_tensor = torch.LongTensor([get_id_of_word(w1), get_id_of_word(w2)])
-    words_tensor = words_tensor.cuda(gpu)
-    # get word embeddings from the best model
-    words_embeds = best_model.embeddings(words_tensor)
-    # calculate cosine similarity between word vectors
-    sim = cos(words_embeds[0], words_embeds[1])
-    lm_similarities[word_pair] = sim.item()
+    word_to_id_mappings = {}
+    for i, word in enumerate(vocab):
+        word_to_id_mappings[word] = i
 
-print("\n\nSimilarity scores:")
-pprint(lm_similarities)
+
+    ### Create DataLoaders ###
+
+    # check if gpu is available
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    available_workers = multiprocessing.cpu_count()
+
+    x_train, y_train, x_dev, y_dev = get_train_dev(brown, ngram_size=3)
+    print("Train shape of x and y:", x_train.shape, y_train.shape)
+    print("Dev shape of x and y:", x_dev.shape, y_dev.shape)
+
+
+    print(f"--- Creating training and dev dataloaders with {BATCH_SIZE} batch size ---")
+    train_set = np.concatenate((x_train, y_train), axis=1)
+    dev_set = np.concatenate((x_dev, y_dev), axis=1)
+    train_loader = DataLoader(train_set, batch_size=BATCH_SIZE, num_workers=available_workers)
+    dev_loader = DataLoader(dev_set, batch_size=BATCH_SIZE, num_workers=available_workers)
+
+
+    # ------------------------- TRAIN & SAVE MODEL ------------------------
+
+    # Using negative log-likelihood loss
+    loss_function = nn.NLLLoss()
+
+    # create model
+    model = NPLM(len(vocab), EMBEDDING_DIM, CONTEXT_SIZE, HIDDEN_SIZE)
+
+    model.to(device)
+
+    # using ADAM optimizer
+    optimizer = optim.Adam(model.parameters(), lr=2e-3)
+
+    best_acc = 0
+    best_model_path = None
+    for epoch in range(EPOCHS):
+        st = time.time()
+        print(f"\n--- Training model Epoch: {epoch+1} ---")
+        for it, data_tensor in enumerate(train_loader):
+            context_tensor = data_tensor[:,0:CONTEXT_SIZE]
+            target_tensor = data_tensor[:,CONTEXT_SIZE]
+
+            context_tensor, target_tensor = context_tensor.to(device), target_tensor.to(device)
+
+            # zero out the gradients from the old instance
+            model.zero_grad()
+
+            # get log probabilities over next words
+            log_probs = model(context_tensor)
+
+            # calculate current accuracy
+            acc = get_accuracy_from_log_probs(log_probs, target_tensor)
+
+            # compute loss function
+            loss = loss_function(log_probs, target_tensor)
+
+            # backward pass and update gradient
+            loss.backward()
+            optimizer.step()
+
+            if it % 500 == 0:
+                print(f"Training Iteration {it} of epoch {epoch} complete. "
+                      f"Loss: {loss.item()}; "
+                      f"Acc:{acc}; "
+                      f"Time taken (s): {time.time()-st}")
+                st = time.time()
+
+        print("\n--- Evaluating model on dev data ---")
+        dev_acc, dev_loss = evaluate(model, loss_function, dev_loader, gpu)
+        print(f"Epoch {epoch} complete! Development Accuracy: {dev_acc}; Development Loss: {dev_loss}")
+        if dev_acc > best_acc:
+            print(f"Best development accuracy improved from {best_acc} to {dev_acc}, saving model...")
+            best_acc = dev_acc
+            # set best model path
+            best_model_path = f'best_model_{epoch}.dat'
+            # saving best model
+            torch.save(model.state_dict(), best_model_path)
+
+
+    # ---------------------- Loading Best Model -------------------
+
+    best_model = NPLM(len(vocab), EMBEDDING_DIM, CONTEXT_SIZE, HIDDEN_SIZE)
+    best_model.load_state_dict(torch.load(best_model_path))
+    best_model.to(device)
+
+    cos = nn.CosineSimilarity(dim=0)
+
+    lm_similarities = {}
+    # word pairs to calculate similarity
+    words = [
+             ('computer', 'keyboard'),
+             ('war', 'peace'),
+             ('war', 'about'),
+             ('school', 'college'),
+             ('school', 'who'),
+             ('national', 'international'),
+             ('national', 'few'),
+            ]
+
+    # ----------- Calculate LM similarities using cosine similarity ----------
+
+    for word_pair in words:
+        w1, w2 = word_pair
+        words_tensor = torch.LongTensor([get_id_of_word(w1), get_id_of_word(w2)])
+        words_tensor = words_tensor.to(device)
+        # get word embeddings from the best model
+        words_embeds = best_model.embeddings(words_tensor)
+        # calculate cosine similarity between word vectors
+        sim = cos(words_embeds[0], words_embeds[1])
+        lm_similarities[word_pair] = sim.item()
+
+    print("\n\nSimilarity scores:")
+    pprint(lm_similarities)
+
+
