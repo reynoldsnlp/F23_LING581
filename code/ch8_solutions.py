@@ -6,12 +6,15 @@ from nltk.corpus import brown
 import numpy as np
 
 nltk.download("brown")
+# nltk.download("universal_tagset")  # TODO find way to limit to Penn Tagset
 
 brown_list = list(brown.tagged_words())
 train_set = brown_list[:928944]
 dev_set = brown_list[928944:]
 
-# Exercise 8.4
+print('all tags:', Counter(tag for tok, tag in train_set))
+
+### Exercise 8.4 ###
 
 
 def build_most_likely_tag_model(corpus):
@@ -19,19 +22,27 @@ def build_most_likely_tag_model(corpus):
     for token, tag in corpus:
         continuations[token].update([tag])
     most_likely_tags = {token: max(tag_counts, key=tag_counts.get)
-                       for token, tag_counts in continuations.items()}
+                        for token, tag_counts in continuations.items()}
+    # You can use tag_counts.most_common(1)[0][0] to do the same thing:
+    # most_likely_tags = {token: tag_counts.most_common(1)[0][0]
+    #                     for token, tag_counts in continuations.items()}
     return most_likely_tags
 
 
+def backoff_rules(tok):
+    # TODO make decisions
+    return 'NN'
+
+
 most_likely_tags = build_most_likely_tag_model(train_set)
-most_likely_dev = [(tok, most_likely_tags.get(tok, 'NN'))
+most_likely_dev = [(tok, most_likely_tags.get(tok, backoff_rules(tok)))
                    for tok, true_tag in dev_set]
 most_likely_acc = sum(true_tag == pred_tag
                       for (_, true_tag), (_, pred_tag) in zip(dev_set, most_likely_dev)) / len(dev_set)
 print(f"{most_likely_acc=}")
 
 
-# Exercise 8.5
+### Exercise 8.5 ###
 
 
 def viterbi(obs, states, initial_prob, trans_prob, emit_prob):
