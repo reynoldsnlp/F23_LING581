@@ -34,3 +34,30 @@
 -----------------------------------------------------------
 | end of epoch   6 | time: 65.91s | valid accuracy    0.915 
 -----------------------------------------------------------
+| epoch   7 |   500/ 1782 batches | accuracy    0.950
+| epoch   7 |  1000/ 1782 batches | accuracy    0.950
+| epoch   7 |  1500/ 1782 batches | accuracy    0.948
+-----------------------------------------------------------
+| end of epoch   7 | time: 65.60s | valid accuracy    0.915 
+-----------------------------------------------------------
+| epoch   8 |   500/ 1782 batches | accuracy    0.952
+| epoch   8 |  1000/ 1782 batches | accuracy    0.950
+| epoch   8 |  1500/ 1782 batches | accuracy    0.951
+-----------------------------------------------------------
+| end of epoch   8 | time: 64.87s | valid accuracy    0.913 
+-----------------------------------------------------------
+| epoch   9 |   500/ 1782 batches | accuracy    0.954
+| epoch   9 |  1000/ 1782 batches | accuracy    0.956
+| epoch   9 |  1500/ 1782 batches | accuracy    0.953
+-----------------------------------------------------------
+| end of epoch   9 | time: 65.77s | valid accuracy    0.914 
+-----------------------------------------------------------
+| epoch  10 |   500/ 1782 batches | accuracy    0.955
+| epoch  10 |  1000/ 1782 batches | accuracy    0.954
+| epoch  10 |  1500/ 1782 batches | accuracy    0.955
+-----------------------------------------------------------
+| end of epoch  10 | time: 65.38s | valid accuracy    0.915 
+-----------------------------------------------------------
+Checking the results of the test dataset.
+test accuracy    0.911
+This is a Sci/Tec news
