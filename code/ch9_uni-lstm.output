@@ -1,0 +1,36 @@
+| epoch   1 |   500/ 1782 batches | accuracy    0.392
+| epoch   1 |  1000/ 1782 batches | accuracy    0.618
+| epoch   1 |  1500/ 1782 batches | accuracy    0.791
+-----------------------------------------------------------
+| end of epoch   1 | time: 64.16s | valid accuracy    0.868 
+-----------------------------------------------------------
+| epoch   2 |   500/ 1782 batches | accuracy    0.878
+| epoch   2 |  1000/ 1782 batches | accuracy    0.880
+| epoch   2 |  1500/ 1782 batches | accuracy    0.889
+-----------------------------------------------------------
+| end of epoch   2 | time: 64.61s | valid accuracy    0.890 
+-----------------------------------------------------------
+| epoch   3 |   500/ 1782 batches | accuracy    0.909
+| epoch   3 |  1000/ 1782 batches | accuracy    0.909
+| epoch   3 |  1500/ 1782 batches | accuracy    0.911
+-----------------------------------------------------------
+| end of epoch   3 | time: 65.81s | valid accuracy    0.905 
+-----------------------------------------------------------
+| epoch   4 |   500/ 1782 batches | accuracy    0.925
+| epoch   4 |  1000/ 1782 batches | accuracy    0.927
+| epoch   4 |  1500/ 1782 batches | accuracy    0.923
+-----------------------------------------------------------
+| end of epoch   4 | time: 65.21s | valid accuracy    0.904 
+-----------------------------------------------------------
+| epoch   5 |   500/ 1782 batches | accuracy    0.942
+| epoch   5 |  1000/ 1782 batches | accuracy    0.943
+| epoch   5 |  1500/ 1782 batches | accuracy    0.943
+-----------------------------------------------------------
+| end of epoch   5 | time: 65.80s | valid accuracy    0.913 
+-----------------------------------------------------------
+| epoch   6 |   500/ 1782 batches | accuracy    0.948
+| epoch   6 |  1000/ 1782 batches | accuracy    0.945
+| epoch   6 |  1500/ 1782 batches | accuracy    0.947
+-----------------------------------------------------------
+| end of epoch   6 | time: 65.91s | valid accuracy    0.915 
+-----------------------------------------------------------

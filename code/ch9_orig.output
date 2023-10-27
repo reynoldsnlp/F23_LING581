@@ -1,0 +1,63 @@
+| epoch   1 |   500/ 1782 batches | accuracy    0.693
+| epoch   1 |  1000/ 1782 batches | accuracy    0.852
+| epoch   1 |  1500/ 1782 batches | accuracy    0.876
+-----------------------------------------------------------
+| end of epoch   1 | time: 15.99s | valid accuracy    0.891 
+-----------------------------------------------------------
+| epoch   2 |   500/ 1782 batches | accuracy    0.898
+| epoch   2 |  1000/ 1782 batches | accuracy    0.901
+| epoch   2 |  1500/ 1782 batches | accuracy    0.903
+-----------------------------------------------------------
+| end of epoch   2 | time: 16.02s | valid accuracy    0.909 
+-----------------------------------------------------------
+| epoch   3 |   500/ 1782 batches | accuracy    0.915
+| epoch   3 |  1000/ 1782 batches | accuracy    0.911
+| epoch   3 |  1500/ 1782 batches | accuracy    0.915
+-----------------------------------------------------------
+| end of epoch   3 | time: 15.83s | valid accuracy    0.912 
+-----------------------------------------------------------
+| epoch   4 |   500/ 1782 batches | accuracy    0.926
+| epoch   4 |  1000/ 1782 batches | accuracy    0.921
+| epoch   4 |  1500/ 1782 batches | accuracy    0.922
+-----------------------------------------------------------
+| end of epoch   4 | time: 15.23s | valid accuracy    0.913 
+-----------------------------------------------------------
+| epoch   5 |   500/ 1782 batches | accuracy    0.933
+| epoch   5 |  1000/ 1782 batches | accuracy    0.928
+| epoch   5 |  1500/ 1782 batches | accuracy    0.929
+-----------------------------------------------------------
+| end of epoch   5 | time: 15.19s | valid accuracy    0.911 
+-----------------------------------------------------------
+| epoch   6 |   500/ 1782 batches | accuracy    0.946
+| epoch   6 |  1000/ 1782 batches | accuracy    0.942
+| epoch   6 |  1500/ 1782 batches | accuracy    0.941
+-----------------------------------------------------------
+| end of epoch   6 | time: 15.14s | valid accuracy    0.917 
+-----------------------------------------------------------
+| epoch   7 |   500/ 1782 batches | accuracy    0.946
+| epoch   7 |  1000/ 1782 batches | accuracy    0.944
+| epoch   7 |  1500/ 1782 batches | accuracy    0.945
+-----------------------------------------------------------
+| end of epoch   7 | time: 15.15s | valid accuracy    0.918 
+-----------------------------------------------------------
+| epoch   8 |   500/ 1782 batches | accuracy    0.944
+| epoch   8 |  1000/ 1782 batches | accuracy    0.946
+| epoch   8 |  1500/ 1782 batches | accuracy    0.944
+-----------------------------------------------------------
+| end of epoch   8 | time: 15.15s | valid accuracy    0.919 
+-----------------------------------------------------------
+| epoch   9 |   500/ 1782 batches | accuracy    0.946
+| epoch   9 |  1000/ 1782 batches | accuracy    0.944
+| epoch   9 |  1500/ 1782 batches | accuracy    0.947
+-----------------------------------------------------------
+| end of epoch   9 | time: 15.06s | valid accuracy    0.917 
+-----------------------------------------------------------
+| epoch  10 |   500/ 1782 batches | accuracy    0.947
+| epoch  10 |  1000/ 1782 batches | accuracy    0.946
+| epoch  10 |  1500/ 1782 batches | accuracy    0.948
+-----------------------------------------------------------
+| end of epoch  10 | time: 15.01s | valid accuracy    0.918 
+-----------------------------------------------------------
+Checking the results of test dataset.
+test accuracy    0.907
+This is a Sports news
