@@ -1,0 +1,1707 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0060)https://linguistics.byu.edu/classes/ling581dl/egnlpprojs.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+            
+  
+            
+  <meta name="Author" content="Deryle Lonsdale">
+            
+  <meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+  <title>nlpcstasks</title>
+  <style>
+<!--
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic}
+.auto-style1 {
+	text-decoration: underline;
+}
+.auto-style2 {
+	text-align: left;
+}
+.auto-style3 {
+	font-family: "Times New Roman", serif;
+}
+.auto-style4 {
+	font-size: 12.0pt;
+	font-family: "Times New Roman", serif;
+	color: black;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: .0001pt;
+}
+.auto-style5 {
+	text-decoration: none;
+}
+.auto-style6 {
+	color: #000000;
+}
+  .auto-style8 {
+	font-family: "Times New Roman";
+	color: rgb(0, 0, 0);
+}
+-->
+  </style>
+</head>
+  <body>
+   This is a synopsis of sample projects carried out by past students in
+Lonsdale's  BYU NLP class (in roughly reverse chronological order):<br>
+<p>
+    <span class="auto-style1">Quantum Dependency Parsing</span>: The first NLP 
+   algorithm to be run on a quantum computer was released in 2020. This project 
+   explores the background of quantum computation, how quantum theory has been 
+   made accessible to an advanced NLP audience, and quantum NLP algorithms and 
+   methodology. Using a Python implementationm, a quantum dependency parser for 
+   English was created using IBM’s Qiskit framework to generate parameterized 
+   quantum circuits based on grammatical parses of sentences; the circuits were 
+   evaluated using both simulators and actual quantum hardware. The circuit’s 
+   parameters are optimized using a gradient-free machine learning method, and 
+   various parsed sentence structures are illustrated. </p>
+ 
+   &nbsp;<span class="auto-style1">Recognizing Emotion in Mandarin Speech</span>: 
+   Speech emotion recognition is important for applications as varied as home 
+   assistants, customer support, and military programs. This project involves 
+   building multiple models for detecting emotion in
+   recorded speech in Mandarin Chinese, a tonal language. The Mandarin Affective Speech Corpus 
+   (MASC) provided data, and the audio was featurized into MFCC arrays. 
+   Classification was performed with sklearn's random forest classifier. The 
+   male-specific generalized model performs best, and the models demonstrate 
+   that anger is easiest emotion to correctly identify in Mandarin speech.
+   <br>
+
+   <p>   <span class="auto-style1">Detecting Toxicity in Online Gaming Usernames</span>: 
+   Toxic usernames containing racial or sexual slurs have existed since the 
+   start of the internet,       particularly in the online gaming space. Although current technology 
+   enables detecting inappropriate words in strings, difficulties arise when 
+   Unicode and other characters are used to “hide” the words from filtering 
+   systems. This project implemented two methods to combat this problem: a 
+   finite state machine (FSM) method and a recurrent neural network (RNN) 
+   method. The two methods performed equally well on a task to detect variations 
+   homophobic slurs but saw varying levels of performance on other variations 
+   that were not found in the dataset. The RNN model outperformed the FSM model 
+   on the out-of-dataset entries, making it the ideal candidate of the two for 
+   implementation to detect usernames with hidden slurs and inappropriate words.</p>
+   <p>
+   <span class="auto-style1">Neural Classification of Historical English Texts</span>:
+   This project introduces CHET-I 50, a system for classifying historical 
+   English texts by intervals of 50 years. Historical English documents were 
+   provided by the 
+   Penn Parsed Corpora of Historical English (PPCHE), and preprocessing was 
+   necessary to regularize Old and Middle English orthography. The WEKA system 
+   was used for maching learning, first for conversion of documents with the 
+   StringToWordVector method, and then classification via a multilayer 
+   perceptron (MLP) that uses the presence of 1000 key lexical items to 
+   determine the date of authorship of a given historical English text within 
+   the domain of C.E. 1150-1910. Precision of 97% was achieved.</p>
+   <p>
+   <span class="auto-style1">Creating an American Sign Language reverse-dictionary: </span>
+   This project addressed the issue of defining unknown American Sign Language 
+   (ASL) signs, and a method for overcoming those issues computationally. Not 
+   many resources will accept sign parameters and return possible matches but, 
+   using the ASL-LEX dataset, a small search engine was built which enables a 
+   user to input ASL sign parameters, like handshape, body location, and 
+   movement and retrieve relevant matches from the corpus of signs.</p>
+  
+   <span class="auto-style1">Hospital User Reviews: Sentiment and Classification</span>: 
+   This project involved analyzing user feedback comments for four hospitals 
+   around Provo to help make patient/customer decisions and better compare one 
+   hospital to another. Processing involved Google reviews which have an overall 
+   star ranking (1-5) and a text review which often provide more insight. 
+   Sentiment analysis on the reviews was performed with the NLTK and VADER 
+   toolkits in Python to determine the overall feelings displayed in each Google 
+   review. Then Latent Dirichlet Allocation categorized each comment by topic 
+   (e.g. referring to the hospital as a whole, rating a particular doctor, 
+   cost/pricing of the facility). Visualization was via pyLDAvis. Correlation 
+   between the sentiment expressed and the stars assigned scored a Rank-Sum 
+   Spearman correlation of 0.72 (p&lt;1.21e-30).
+   <p>
+   <span class="auto-style1">Prosodic Speech Synthesis</span>: Identifiable 
+   emotions in speech are essential to positive interactions. The inclusion of 
+   prosody in synthesized speech can enable systems to better capture these 
+   essential emotions. This project developed a framework for training a 
+   text-to-speech system that allows users to specify the desired prosody 
+   represented in the generated output. The CMU Arctic dataset was used for 
+   training synthesized speech, and integration with PyToBI allows the user to 
+   specify ToBI-annotated prosodic contours for a given textual utterance to be 
+   synthesized. Alignment is performed with the Montreal Forced Aligner. Neural 
+   speech synthesis was generated with the Tacotron2 and WaveGlow architectures.
+   </p>
+   <p><span class="auto-style1">Creating a Crossword Puzzle Solver Using NLP</span>: 
+   The goal of this project was to produce a model that can generate crossword 
+   answers based on given clues that is accurate, fast, and does not dependent 
+   on previous crossword data. Clues were split up into five types, each of 
+   which has its own method of solution. <span class="auto-style8">A neural GRU</span>
+  model was trained with large layers, many LSTM units, a large batch size, and 
+   lots of epochs.
+   Overall performance of the system was about 72% accuracy.
+   </p><p>
+    <span class="auto-style1">Analysis of Song Lyrics with BERT</span>:&nbsp; 
+   With the growing popularity of music streaming services, music recommender 
+   systems (MRSs) have become very popular. Generally successful at suggesting 
+   songs that fit a listener’s preferences, these systems still produce many 
+   poor recommendations. Given that the emotional state of a listener is known 
+   to influence their needs, this project performs neural sentiment analysis of 
+   song lyrics using BERT, a transformer-based machine learning technique for 
+   NLP. The goal of the project is to build a system that can consistently and 
+   accurately identify a song as fitting into one of four emotional categories, 
+   relaxed, angry, sad, or happy, and which could function as an integrated part 
+   of an MRS. With the MoodyLyrics dataset and the HuggingFace transformer 
+   toolkit, F1 values for classification between 4 emotions ranged from 0.75 to 
+   0.88.</p>
+   <p>
+   <span class="auto-style1">Information 
+   Retrieval using New and Improved Contrastive Learning</span>: Information 
+   retrieval has benefited recently from the advancements in deep learning, 
+   where neural methods are able to generate efficient dense embeddings. Dense 
+   embeddings allow an information retrieval system to preform better in 
+   zero-shot settings than sparse methods. Using dual BERT encoders this project 
+   explores the zero-shot capabilities of this model. Using these unsupervised 
+   methods allows the model to generalize well to new domains. The result is a 
+   novel loss function that converges faster than other contrastive loss 
+   functions, which not only speeds up convergence, but allows the model to 
+   achieve state-of-the-art zero-shot Recall@100 performance.</p>
+   <p>
+   <span class="auto-style1">Depression Detection Using a Fine-tuned 
+   Transformer-based Model</span>: 
+   Depression is a serious mental illness that affects millions of people every 
+   year, and social media is an outlet that many people use to express their 
+   feelings. The content of social media posts could be used to detect 
+   depression symptoms in individuals. This project involved evaluating 
+   pre-trained and fine-tuned BERT models to classify tweets as either 
+   “depressed” or “not depressed.” Most prior work in this area invovled RNNs or 
+   a combination of CNNs and RNNs (specifically LSTMs) and have achieved high 
+   accuracy scores, so this project explored the use of a neural Transformer 
+   architecture to achieve high precision and accuracy scores. Pre-trained 
+   models achieved 60%, whereas fine-tuning greatly improved performance, 
+   resulting in 97% accuracy. </p>
+   <span class="auto-style1">Consumer Reviews and Evolving Content</span>: This 
+   research project describes the differences in user review content between 
+   users with varying levels of review experience. In particular, a novel 
+   dataset of personal fragrance reviews with accompanying product-level and 
+   user-level information was used. While the number of reviews written is an 
+   imperfect proxy of consumer expertise, the results (via regression) provide 
+   evidence that the content of a user’s reviews change as the user provides 
+   more reviews.
+   <span class="auto-style1">
+   <br>
+   <br>Speech-to-Speech Translation</span>: This 
+   project developed an end-to-end Polish-to-Spanish speech translation system. 
+   For the first step, the Microsoft Azure ASR speech-to-text system was used, . 
+   The next step involved neural machine translation, via a custom-trained model 
+   with OpenNMT. Training data involved about 800,000 bitext pairs from the TED 
+   Talks 2020, Wikipedia, and MultiPara Crawl corpora, sent through a text 
+   cleaning pipeline comprised of Okapi Olifant and Okapi. The MT model was 
+   trained on Google Colab Pro. The final stage was a text-to-speech engine 
+   provided by Microsoft Azure. Custom modifications were made to the pipeline 
+   via an interactive GUI to incrementally display the output ASR transcription 
+   and select voice gender options for the synthesized voice. Evaluation on the 
+   MT portion was done with the BLEU metric, and an informal human evaluation 
+   was done on the quality of the generated target-language speech output.<span class="auto-style1"><br>
+   <br><span class="auto-style1">Combinatory Categorial Grammar For Thai</span></span>: 
+   This project resulted in a Combinatory Categorial Grammar parser for the Thai 
+   language. It was implemented with the OpenCCG framework with lexical and 
+   syntactic combination rules developed in consultation with a dictionary and 
+   grammar of the language. Several aspects of the grammar were encoded to 
+   handle nouns, complex noun phrases, and adjectives, as well as sentence types 
+   illustrating intransitive, transitive, and ditransitive verb phrase usage.<span class="auto-style1"><br>
+   <br><span class="auto-style1">Exploring Performance of Target and Context 
+   Word Embeddings on Extractive Text Summarization</span></span>: Extractive text 
+   summarization involves selecting a subset of K sentences that best convey the 
+   overall meaning of a given document. Both static word embeddings (word2vec, 
+   fastText, GloVe) and contextual word embeddings (BERT) have been used to 
+   accomplish this task. Static word embedding models learn 2 sets of embedding 
+   vectors, typically termed "target" and "context" embeddings. This project 
+   explored structural differences in target and context space, and analyzed 
+   performance differences between the embedding sets on two extractive text 
+   summarization approaches: TextRank and k-means clustering. The BBC News 
+   Summary dataset was used in the experiments. Contrary to the hypothesis, 
+   there was no statistically significant difference between target and context 
+   embeddings for either of the approaches. 
+   <span class="auto-style1">
+   <br><br><span class="auto-style1">
+   Topic and Language Recognition using Unsupervised Machine Learning</span></span>: 
+   Identifying the source language of a document or corpus of text with NLP is 
+   called language recognition. Extracting topics and common threads or themes 
+   from a corpus is called Topic Recognition. This project addressed language 
+   and topic recognition via machine learning using an unsupervised Latent 
+   Dirichlet Allocation algorithm. The data consisted of conversational email 
+   data and specified modeling topics of interest for languages in English, 
+   Spanish and Italian. The processing pipeline involved Pandas (an open-source 
+   library for creating, manipulating, and indexing large datasets), NLTK, 
+   Spacy, and Gensim. Evaluation using perplexity and coherence indicated best 
+   performance for Italian, followed by Spanish and then English.<span class="auto-style1"><br><br>
+   <span class="auto-style1">Automated Student Writing Feedback with 
+   Transformers</span></span>: Many students struggle with argumentative writing. 
+   Automated feedback programs allow students to get live suggestions and 
+   feedback on the structure of their writing. Researchers at Kaggle and&nbsp; 
+   Georgia State University have compiled a dataset of middle and high-school 
+   students’ argumentative essays, along with annotations for argument 
+   structure. This project involved fine-tuning a pretrained BART neural 
+   language model encoder and using the Viterbi algorithm to perform the 
+   annotation task. The method achieved a macro f1-score of 0.64, confirming 
+   relatively high performance on the majority of label classes.<br>
+   <span class="auto-style1">
+   <br>
+   <span class="auto-style1">Logic Parser</span></span>: This project produced a 
+   semantic parser. Input text is processed with the Stanza CoreNLP Python 
+   wrapper to generate a dependency parse. Targeted syntactic relationships 
+   (such as agent-verb, verb-object pairs) are extracted and loaded into Prolog 
+   predicates, which are then queried directly to extract information contained 
+   in the text. 
+   <span class="auto-style1">
+   <br><br><span class="auto-style1">Catalan Sentiment Analysis</span>:</span>
+   This project performed sentiment analysis on Tweets written in the Catalan 
+   language. Four different supervised classifier models were compared: Decision 
+   Tree, Naïve Bayes, Maximum Entropy, and Support Vector Machine. The NLP 
+   toolkit used for preprocessing was Freeling's Catalan pipeline. The 
+   classifiers’ performance on raw versus preprocessed was examined and compared 
+   in terms of precision and recall measures. Results suggest the preprocessing 
+   step did not yield a large difference in performance metrics.<span class="auto-style1"><br><br>
+   <span class="auto-style1">Google Reviews Sentiment Analyzer</span></span>: Google 
+   Reviews is a platform for users to leave comments about their experience with 
+   specific business vendors. By performing sentiment analysis on these 
+   comments, machine learning can detect and predict whether a comment or review 
+   is positive or negative. The intent of this project was to do so but with a 
+   twist. Most available analyzers around focus on specific areas of analysis 
+   and only predict the sentiment of reviews based on those areas. The output of 
+   this project is an analyzer that can be used in any area and predict any 
+   review given as an input. Extracted featured included TF-IDF, and two 
+   different classifiers (Random Forest and k-Nearest Neighbors) were compared. 
+   The former achieved overall best results although the latter performed better 
+   for positive reviews. 
+   <span class="auto-style1">
+   <br><br><span class="auto-style1">Using OpenNMT to create a neural machine 
+   translation system</span></span>: For this project an 
+   English-to-Brazilian Portuguese neural translation system was 
+   developed.Training involved 65.8 million sentence pairs from the Open 
+   Subtitles portion of the OPUS corpus with custom Python code for data 
+   preparation. The OpenNMT framework was used for the engine; a 60/20/20 split 
+   was used for training/validation/testing. Translation was performed on Google 
+   Colab, and BLEU scoring was used to evaluate the system's performance.<span class="auto-style1"><br>
+   <span class="auto-style1"><br>Sentence-Based Sentiment Analysis of Amazon 
+   Reviews</span></span>: This project investigated the empirical difference between 
+   consumer-supplied star ratings and the written review they gave. NLTK's 
+   sentiment analysis and other NLP tools and techniques were used to generate 
+   sentence-based metrics that were then combined to produce an overall score. 
+   Machine learning was used to optimize the mapping between the overall review 
+   scores and the star ratings.<span class="auto-style1"><br><span class="auto-style1"><br>Sampling Persuasive Interventions Using Large 
+   Language Models</span></span>: Psychologists, political scientists, and other social 
+   scientists have long sought to understand what makes for effective persuasion 
+   between human beings. Since language models are ultimately trained on 
+   human-generated text, to some extent they provide a lens through which human 
+   attitudes and behaviors can be studied. This project demonstrated how 
+   language models can be used as theory-generation machines for human 
+   persuasion. Two versions of Google Research's T5 transformer (Small and 3B) 
+   were trained on the Pile dataset. Given a provocative natural-language 
+   assertion and an "interventionist" follow-up question,&nbsp; the system 
+   generates responses calculated to show whether the question was persuasive 
+   enough to trigger reconsideration of the original assertion. Reasonable 
+   success was achieved in several domains: politics, racism, sexism, 
+   anti-vaxxism, and the (alleged) moon landing.<span class="auto-style1"><br><br>
+   <span class="auto-style1">Marshallese N-gram Language Model</span></span>: This 
+   project involved creating a corpus and train an n-gram language model for a 
+   lesser-resourced language: Marshallese, a Western Micronesian language. 
+   Content was scraped from the Web, the corpus was prepared with the AntConc 
+   concordancer, and the NLTK toolkit was used to generate a language model.
+   <span class="auto-style1">
+   <br>
+   <br><span><span class="auto-style1">Semi-supervised Machine Translation using 
+   Image Encoding Language Model</span></span></span><span>: Current machine translation approaches 
+   are mostly supervised, requiring bilingual datasets that are often hard and 
+   time consuming to curate. This project investigated recent advances in 
+   semi/unsupervised methods to train a semi-supervised machine translation 
+   system by first training language models for two separate languages, and 
+   aligning them by using few supervised examples. Data for English-French 
+   translation came from Tatoeba, separate language models were trained, and two 
+   approaches were compared: a linear model in Pytorch, and a 3-layer neural net 
+   with ReLU activation. The system was able to generalize somewhat, handling 
+   much greater data than the amount it was trained on.</span><span class="auto-style1"><br>
+   <br><span class="auto-style1">Automated Essay Scoring with LSTM RNNs</span></span>: 
+   This project developed a neural network-based essay grader. Trained on the 
+   Hewlett Foundation's Automated Essay Scoring Dataset, a Long Short-Term 
+   Memory-based Recurrent Neural Network grades unseen essays of up to 550 
+   words. Performance as measured against human expert graders varied based on 
+   the amount of training data, showing it to be a reasonable prototype but not 
+   ready for deployment in a high-stakes environment.<span class="auto-style1"><br><br>
+   <span class="auto-style1">Labeling Pronouns and Speech with CoreNLP</span></span>: 
+   Reference resolution is performed in NLP to indentify who(m) pronouns like 
+   "he", "she", and "they" refer to in a text sample. This project involved 
+   processing the novel "Jane Austen" from Project Gutenberg and processing it 
+   with CoreNLP's reference resolution tools. Several stages of CoreNLP's 
+   pipeline were executed and reference chains were computed and evaluated.<span class="auto-style1"><br>
+   <br><span class="auto-style1">Exploring the Culture of Disjoint Domains with 
+   Word Embeddings</span></span>: Word embeddings encode the complex lexical meaning 
+   and language usage, encapsulating considerable socio-pragmatic meaning&nbsp; 
+   This project used word embedding models trained on disjoint domains as a 
+   means of assessing the cultural differences between them. Content from two 
+   corpora (arxiv.org scientific abstracts versus OpenSubtitles film/TV show 
+   transcripts) was curated and processed via the gensim Python package 
+   implementing the word2vec modeling technique. Responses triggered from each 
+   model (Dialogue vs. Research) were compared and contrasted. Human judges were 
+   consulted to rank the most dissimilar wordlists across the two domains, with 
+   the word "mean" ranking the highest.<span class="auto-style1"><br><br>
+   <span class="auto-style1">Arabizi 
+   Translation with Sequitur G2P for the Levant Dialect</span></span>: Arabizi is a 
+   hybrid texting language that uses Roman characters to substitute letters in 
+   Arabic and is widely used in social media. In this project a machine-learning 
+   technique (statistical joint sequence modeling) was used to implement 
+   grapheme-to-phoneme conversion to create an underlying model of Arabizi 
+   pronunciation. An Arabizi corpus was scraped from social media platforms 
+   (Facebook, Twitter, and Instagram) and a g2p model compiled. An evaluation 
+   set of 451 unseen words was processed by the model and then checked against 
+   the Google Translate IPA. an accuracy rate of over 75% was achieved. 
+   <span class="auto-style1">
+   <br><br>
+   <span class="auto-style1">Humor and Offensive Language Detection</span></span>: For 
+   this study, a tool was developed for humor and offensive language detection 
+   within a textual entity. Salient features involve sentiment, sentence 
+   structure, custom entity recognition, and word vector embeddings. Each 
+   feature underwent statistically signification correlative connections to 
+   construct predictive variables. Using a Codalab annotated corpus, models were 
+   trained via a comprehensive NLP pipline involving tokenization, 
+   part-of-speech tagging, named entity recognition, word embeddings, sentiment 
+   analysis, and textual characteristics to produce about 40 variables. 
+   Hierarchical classifications were used to identify degrees of humor and 
+   offense using Gradient Boost (i.e. Bootstrap Forest). The system performed 
+   very well for humor detection, but only slightly better than baseline for 
+   offensive content.<span class="auto-style1"><br></span>
+   <br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <span class="auto-style1">Using doc2vec to do text2song</span>: This project 
+   explored the applicability of document-level word embeddings for retrieving 
+   songs based on their lyrics' similarity to a user's query. Using a neural 
+   vector representation by Gensim called doc2vec, a model was trained on the 
+   Kaggle "Song Lyrics from 6 Genres" dataset and other sources. Input based on 
+   the Continuous Bag-of-Words (CBOW) algorithm and a straightforward neural 
+   network allowed for closest-match calculation in finding the closest song(s). 
+   Performance was variable, likely signaling the need for even more training 
+   data beyond the 17,000+ items.</span><br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <br><span class="auto-style1">Evaluating the Output of Neural Language Models</span>: 
+   Many NLP neural networks produce a vector of scores called logits that are 
+   often passed though a normalization function such as softmax. In the context 
+   of language modeling we commonly refer to the end result probability 
+   distribution. However, it is unclear whether neural text generators actually 
+   produce accurate probability distributions. This project compares the output 
+   of four neural text generators (two versions each of GPT2 and XLNet from the 
+   Huggingface Transformers Python library) to actual probability distributions 
+   found in human-generated corpora (150,000 sentences in all from Fanfiction, 
+   Reddit, and Wikipedia).&nbsp; For all four language models tested, the model 
+   accuracy turned out to fall far below the scores output by the model; the 
+   model has not learned to output an accurate probability distribution, at 
+   least for the corpora tested.<br><br><span class="auto-style1">Morphological 
+   Parsing of Unpointed Hebrew Text</span>: Over the decades hand-crafted 
+   resources for lexical processing of Biblical Hebrew (e.g. vowel pointing, 
+   part-of-speech tagging, lemmatization) have been produced. However, higher 
+   levels of processing require more annotation. In this project the Westminster 
+   Hebrew Morphology database was normalized and reformatted. Over 2500 training 
+   examples were developed for the state-of-the-art Morfette machine learning 
+   system to enable large-scale phonological, lexical, morphological, and 
+   semantic analysis. The resulting model can be implemented in an NLP pipeline 
+   for subsequent higher-level processing. Using linear regression, the pointed 
+   corpus accuracy was 72% on unseen data, and 67% for the unpointed input.</span><br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <br><span class="auto-style1">Infant Cry Prediction</span>: This task 
+   classifies the reason why an infant is crying, a non-trivial task. In recent 
+   years, neural networks have been applied to this problem by operating on 
+   spectrograms of audio signals. This project introduced a method of learning 
+   temporal patterns in infant cries by creating a recurrent neural network that 
+   operates directly on raw audio waveforms. Using the Donate-a-cry corpus, a 
+   recurrent neural network (RNN) model was trained with PyTorch on MFCC 
+   features extracted from the audio files to produce a five-way output 
+   classification. This procedure achieved over 80% accuracy and over 0.6 F1 
+   macro score, demonstrating the ability to generalize even on minority 
+   classes.</span><br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <br><span class="auto-style1">Shakespearean Style Transfer</span>: The use of 
+   convolutional neural networks and deep learning has allowed for style 
+   transfer of images. Similarly, past sequence-to-sequence models have also 
+   performed neural style transfer for text. This project attempts to exploit a 
+   new model, the transformer, to yield better text style transfer. Training 
+   data from Github and Kaggle included each of Shakespeare's plays in both 
+   original/classic form and in a modern rewrite. The Lord of the Rings texts 
+   available from Kaggle were used as the source for style conversion, which 
+   were subject to modern-to-Shakespearean transformation. On generated 
+   texts, the Kullback-Leibler divergence value from Shakespearean was about 
+   1.8, about 6 times the typical value for English-Spanish machine translation 
+   output.</span><br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <br><span class="auto-style1">Expressive Piano Music Generation with 
+   Compressive Transformers</span>: This project developed the Music Compressive 
+   Transformer (MCT). It leverages an extended version of the MAESTRO dataset 
+   (Hawthorne et al., 2019), a novel tokenization strategy that includes sustain 
+   pedal tokens, and a Compressive Transformer (Rae et al., 2019) to generate 
+   high-quality, expressive piano music with long-range dependencies. A Pytorch 
+   Compressive Transformer was used to train the model, with one adaptation: the 
+   ReLU activations in the feedforward layers were replaced with a gated linear 
+   unit to increase performance. Experimentation was carried out with two 
+   versions of MCT and found that the second version (MCT Deep) is capable of 
+   generating remarkably consistent music on the scale of 214 tokens, which is 
+   about nine to ten minutes of music. Adding a simulated sustain pedal was 
+   straightforward and resulted in striking improvement in musicality.<br></span>
+   <br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <span class="auto-style1">Machine Learning vs. The Mentinah Archives</span>: 
+   Stylometric analyses of religious texts have been carried out on multiple 
+   occasions in efforts to assess claims held by religious communities regarding 
+   authorship. This project goes beyond statistical analysis to involve machine 
+   learning in determining authorship in The Mentinah Archives, a volume of 
+   Mormon "pseudepigrapha" which claims 26 authors. Through supervised neural 
+   learning on pairwise differences of bigrams of various texts, logistic 
+   regression was applied to classify authors of the texts as either ”same” or 
+   ”different”. Feature engineering included standard stylometry, TF-IDF, and 
+   bigram values, and control texts were The Book of Mormon and Doctrine and 
+   Covenants. Depending on the strictness of the matching criterion, support was 
+   found for between 4 and 17 authors.</span><br style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+   <span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+   <br><span class="auto-style1">Aspect-Based Sentiment Analysis for Restaurant 
+   Reviews</span>: The goal of this project was to build a tool that reports on 
+   restaurant performance (areas they are performing well in, areas that need 
+   improvement) for informing customer choices and for performing a contrastive 
+   analysis against competitors. Yelp reviews were pre-processed and passed 
+   through an NLP pipeline to perform tokenization, lexical analysis, and 
+   sentiment identification. In particular, four aspects were treated: a 
+   “general” score, a “food quality” score, a “customer service” score, and a 
+   “Covid safety” score. In addition, menu items with the most mentions were 
+   extracted with an associated sentiment score for each of those items. 
+   Subjective evaluation indicated quite good performance on a small set of 
+   different restaurants that largely followed conventional perception. <br><br>&nbsp;<span class="auto-style1">A 
+   Persian-English Chatbot</span>: Chatbots are increasingly popular for a wide 
+   range of purposes, but only a few are available for the Persian language. 
+   This project developed a chatbot that can communicate via text in both 
+   Persian and English. It was implemented using Python tools including NLTK, 
+   NumPy, and Pytorch. World knowledge was collected from language resources 
+   such as Wikipedia, OPUS Movie Subtitles, and various Question Answering 
+   datasets. After conversation turn preprocessing (which included romanization 
+   for Persian), a retrieval-based machine learning system returned the most 
+   appropriate response. Informal evaluation by human volunteers indicated good 
+   functionality for straightforward responses but difficulty with humor, 
+   sarcasm, and ambiguity.</span><span class="auto-style1"><br><br>Vocal Recognition Using a Triplet Convolutional Neural Net:</span> For this 
+   project a triplet neural network solution was developed to compare different 
+   images of spectrograms for speaker recognition. The goal was to determine 
+   whether the voice represented in a sound file is from an enrolled person or 
+   from an unknown person. Using the Google Colab to render and capture 
+   spectogram imagery and a data set from OpenSLR, the system vectorizes human 
+   voices and compares them in a multidimensional embedding space. The accuracy 
+   for this algorithm hovers around 65% for both telling if the voices are the 
+   same and telling if they are different.<span class="auto-style1"><br><br>
+   Enhancing L2 Reading: Unobtrusive Annotations for the Writings of Leo 
+   Tolstoy:</span> Even advanced L2 learners can encounter many unfamiliar words 
+   when reading authentic texts. Frequent dictionary look-ups interrupt the 
+   reading process and inhibit enjoyment. This project resulted in a system that 
+   leverages Russia tokenization and lemmatization, automatic translation APIs, 
+   and word frequency lists. Called Learners’ Tolstoy, it contains a pipeline 
+   that provides unobtrusive word translations through a web app, making the 
+   writings of Leo Tolstoy accessible to Russian language learners.<br><br>
+   <span class="auto-style1">English Simplification Through Translation</span>: 
+   This two-stage system performs the task of English language simplification. 
+   Processing proceeds in two stages. First, rephrasing as 
+   simplification is treated as a translation problem, performing 
+   English-to-simplified-English translation using a neural transformer with 
+   multi-headed attention. The second stage performs lexical simplification via 
+   BERT mask prediction. Results on the Simple English Wikipedia Dataset are 
+   examined and compared to the results of Coster and Kauchak, who created the 
+   dataset. The system exceeded the goals set for it and provides adequate, 
+   though imperfect, simplifications.<br><br><span class="auto-style1">A Deep 
+   Learning Approach to Solving Limericks</span>: In this project a deep 
+   learning approach was taken to learn the answer to “solvable” limericks. 
+   Its model uses a pre-trained GPT-2 instance fine-tuned with a single linear 
+   layer to sample predictions of the end of a limerick given four complete 
+   lines and a final incomplete phrase. The system then uses a generated list of 
+   possible rhymes to select a prediction that rhymed. The results of this were 
+   reasonably accurate completions of solvable limericks like those on NPR's 
+   Listener Limerick Challenge.<br><span class="auto-style1"><br>A 
+   Stylometry-Based Book Recommendation System:</span> Recommendation systems 
+   connect consumers to relevant products and information by personalizing 
+   recommendations based on the consumers' previous experiences. This project 
+   implements a novel approach to content-based book recommendation using 
+   stylometry to compare the writing styles found in different books. A sample 
+   library of novels was collected and filtered with respect to sample texts 
+   provided by the user. For this proof-of-concept implementation the system 
+   achieves 100% accuracy across the library.<br><br>
+   <span class="auto-style1">Towards A Better Gospel Search Experience:</span> 
+   Currently, there is no quality or versatile search engine available for the 
+   Church of Jesus Christ of Latter-day Saints’ gospel-related text content 
+   like scriptures and general conference talks. This project implemented a 
+   gospel content search engine. It uses a telescoping model for information 
+   retrieval using the TF-IDF-based BM25 algorithm followed by a vector 
+   embedding model to re-rank search results at the segment level. Content from 
+   the Church website was scraped and stored on a MongoDB server. Performance 
+   on several metrics ranged from 60% (Topic Search) to 100% (Exact Match, 
+   Semantic Similarity, and Question Answering).<br><span class="auto-style1">
+   <br>Determining Song 
+   Genre Based on Lyrics:</span> This project trained a multi-layer perceptron 
+   machine learning system to classify song lyrics according to genre. Over 
+   17,000 songs in 3 genres (country, rock, rap/R&amp;B, alternative, and pop) were 
+   preprocessed with coreNLP and NLTK, and a set of 14 corpus-based features 
+   were used for classification. Performance of the system was comparable to 
+   state-of-the-art systems that use tens of thousands of features.<br><br>
+   <span class="auto-style1">Twitter Sentiment Analysis: A Learning Approach</span>: 
+   This project developed a system that performs sentiment analysis 
+   (positive/negative) on labeled Twitter data using machine learning. 1.6 
+   million tweets from a Kaggle competition were preprocessed, vectorized, and 
+   classified for sentiment using four algorithms in Scikit-learn: RandomForest, 
+   XGBoost, Logistic Regression, and Multinomial Naïve Bayes. Accuracy varied 
+   from 77-80%.
+   <p><span class="auto-style1">Creating Emotions for Robots</span>: In this 
+   project user emotion was used to control the functions of a robot. 1000 audio 
+   recordings from the Toronto Emotional Speech Set (TESS) were used with the 
+   PocketSphinx LiveSpeech model to generate text. The VADER sentiment analysis 
+   package was used to classify the utterance for one of several emotions, and 
+   then they were mapped to navigation commands recognized by an Arduino Smart 
+   Car. The robot enacts the emotion and the commands in a variety of ways 
+   similar to the movie WALL-E (e.g. excitedly driving around in circles, 
+   neutral emotion as a monotone simplistic drive, sadness as slow forward 
+   motion).</p>
+   <div>
+	   <span class="auto-style1">Abusing Visemes for Bad Lip Reading</span>: 
+	   This project created an automated program for computing confusible 
+	   visimes.&nbsp; For example, "olive juice" and "I love you" look the same 
+	   articulatorily when spoken. An input sentence is converted via CMUdict 
+	   into ARPABET phonemes; then the result is iteratively matched back into 
+	   CMUdict to find similarly sounding word sequences based on viseme groups. 
+	   The resulting outpus were then scored by a pretrained GPT-2 model to 
+	   filter out ungrammatical sequences.&nbsp; <br><br>
+	   <span class="auto-style1">Topic Modeling for Conceptual Modeling 
+	   Conferences</span>: This project involved creating a topic model to 
+	   analyze a corpus containing scholarly technical papers from several years 
+	   of an international conceptual modeling conference. The approach used the 
+	   MALLET machine learning system to create a Latent Dirichlet Allocation 
+	   model.&nbsp; The project allowed organizers of the conference to identify 
+	   different topics, group similar papers together, and visualize the change 
+	   in topics over time to look for useful patterns. State-of-the-art 
+	   results were obtained. <br><br><span class="auto-style1">Infant Cry 
+	   Prediction</span>: The problem of identifying why an infant is crying is 
+	   one that has plagued parents since the dawn of time. This project 
+	   demonstrated that it is possible to use machine learning techniques to 
+	   identify the reasons for an infant's cry. It involved exploring several 
+	   classification techniques including classical machine learning versus 
+	   more modern deep learning methods. Using data from the annotated 
+	   Donate-a-Cry Corpus annotated for 5 categories (belly pain, needing to 
+	   burp, hunger, tiredness, and discomfort), various baseline methods were 
+	   applied (Least Squares, Gaussian and Linear Discriminant, Support Vector 
+	   Machine, XGBoost, and Random Forest). Then Mel-Frequency Cepstral 
+	   Coefficient vectorization was computed for each baby cry, and then 
+	   rendered as spectogram images. The results were used to train a 
+	   convolutional neural network. Performance far exceeded non-neural 
+	   baselines, achieving over 80% accuracy. <br><br>
+	   <span class="auto-style1">The Universal Sentiment Search Engine</span>: 
+	   The result of this project was a broad-range sentiment analysis search 
+	   engine. It takes in a web search string, performs a query, collects 
+	   the returned content, and then processes the results for sentiment using 
+	   the VADER analysis package. A post-processor tabulates the results. 
+	   Evaluation was carried out on Google for websites, Twitter for tweets, 
+	   and YahooNews for news articles. Because the free-form nature of the 
+	   content, Twitter performance was not as high as for the other two text 
+	   types, which did well.<br><br><span class="auto-style1">Lie Detection 
+	   Using Cognitive Interviewing and NLP</span>: Cognitive interviewing is 
+	   more accurate in detecting lies than are classical interviewing or 
+	   interrogation techniques. Cognitive interviewing involves imposing a 
+	   cognitive load (i.e. increased mental strain) in order to gather more 
+	   detail. This project developed a system to detect lies based on cognitive 
+	   interview protocols and annotations from the Boulder Lies and Truth 
+	   Corpus. Audio input is analyzed by Google Recognizer for several 
+	   acoustical and lexical features. These are then processed via 
+	   Scikit-learn using Logistical Regression. The system achieves 
+	   approximately 69% lie detection accuracy in comparison to the average of 
+	   approximately 55% accuracy attained through common measures by trained 
+	   interviewers.<br><br><span class="auto-style1">Sentiment Analysis of 
+	   Tweets for Real-time Disasters</span>: This project uses sentiment 
+	   analysis of&nbsp; tweets to determine whether a given tweet includes 
+	   real-time disaster information. Tweets from a related Kaggle competition 
+	   were preprocessed, and different features from the text were engineered 
+	   to train a neural network using BERT from TensorFlow. The result was a model that can 
+	   predict real-time disaster information with a 82% precision.<br><br>
+	   <span class="auto-style1">A Novel Kiribati Language Learning Tool:</span> 
+	   Kiribati is a low-resource Micronesian language with little technological 
+	   support. This project involved developing several computational tools to 
+	   help in learning Kiribati. The first step involved programming the 
+	   Festival TTS text-to-speech system to pronounce Kiribati words. The 
+	   second step involved adapting the OpenDial dialogue toolkit to create a 
+	   Kiribati Dialogue Move Engine to produce context-appropiate 
+	   whole-sentence utterances. Pipelining the two together resulted in the 
+	   first ever speech synthesis engine for the language. <br>
+	   <br><span class="auto-style1">Valiant Effort for Sarcasm Detection and 
+	   Creation</span>: Detecting sarcasm is notoriously difficult for humans. 
+	   This project developed two systems: one to detect sarcasm in newspaper 
+	   headlines, and one to generate sarcastic newspaper headlines. Instances 
+	   from the News Headlines Dataset for Sarcasm Detection were preprocessed 
+	   and vectorized. Various machine learning algorithms were used in 
+	   Scikit-learn as a baseline; Random Forest performed best as a baseline. Then a neural 
+	   network was trained and tested, achieving about 86% in detecting 
+	   sarcastic headlines. Finally, a character-level neural model was then 
+	   trained on the examples and used in an attempt to perform character-level 
+	   generation of headlines given one seed character. Results were 
+	   semi-coherent but showed that many more thousands of training epochs and 
+	   probably many more examples would be required to produce understandable 
+	   results. <br><br><span class="auto-style1">Speech Transcription Pipeline 
+	   using Mozilla DeepSpeech</span>: This project developed a speech 
+	   transcription pipeline for analyzing both sentiment and content. The 
+	   pipeline was built using the open-source Mozilla DeepSpeech transcription 
+	   software, the VADER sentiment analysis package, and the spaCy named 
+	   entity recognizer. In cooperation with a local company, sound recordings 
+	   of customer phone calls were analyzed to more automatically detect what 
+	   they were saying and feeling about the company's products and other 
+	   targeted information of interest.<br><br><span class="auto-style1">
+	   Albanian Speech Recognition</span>: Albanian is a low-resource language 
+	   in the Balkans with little technological support. This research project 
+	   resulted in bottom-up development of a new speech recognizer for 
+	   Albanian. Using several tools from the CMU Sphinx toolkit, plus limited 
+	   available data in Albanian, the speech recognizer includes a phonetic 
+	   dictionary, a language model, an acoustic model, and a decoder. Audio 
+	   files are transcribed into Albanian text with up to 70% accuracy.<br><br>
+   <span class="auto-style1">Sentiment Analysis of the Book of Mormon</span>:&nbsp; 
+   After extensive preprocessing, the text was annotated using the coreNLP 
+   sentiment analysis pipeline (tokenize, ssplit, pos, parse, sentiment) for 
+   annotation. The result was an annotation tree that included a sentiment label 
+   for each sentence on a 5-point scale of emotional perception. 
+   Initial massively negative results were explained by the high number of 
+   out-of-vocabulary words in the Sentiment Treebank. Accordingly, word-level 
+   scores for common terms not found in the resource (mostly reflecting 
+   religious terms) were augmented with sentiment annotations from the 
+   Christianity sub-Reddit and then by re-training the Sentiment Treebank and 
+   re-running the annotator, with dramatic improvement. For evalation a short 
+   questionnaire was given to 20 human respondents who each annotated 20 short 
+   passages for sentiment.<br><br><span class="auto-style1">Next Word Prediction 
+   in Hmong</span>: For this project a corpus of several hundred thousand words 
+   of Hmong was scaped from the Web and tokenized using NLTK. Then, using 
+   OpenGrm, a smoothed n-gram model of the corpus was built. Using the Python 
+   arpa module, experiments were run performing next-word prediction, perplexity 
+   measures, and scoring sentences.<br><br><span class="auto-style1">Predicting 
+   Retweets Using NLP and Social Features</span>: This project developed a 
+   system that uses attributes of the text of a tweet, plus attributes of the 
+   user posting the tweet, to determine the number of retweets it might receive. 
+   10,000 recent tweets were downloaded via the Twitter API and the Python 
+   Tweepy module. Typical data wrangling was performed (tokenization, POS 
+   tagging, NER and sentiment analysis), and feature extraction and analysis was 
+   done on an ensemble of over 30 features, collectively and individually, using 
+   linear regression and multi-layer perceptrons. Sample findings were that 
+   retweetability improved as the tweets were richer in media (pictures, gifs, 
+   videos, and hashtags) or when they were somewhat positive in content.<br><br>
+   <span class="auto-style1">A Better Way to Recruit</span>: This project 
+   developed an NLP component as an add-on to a popular existing GUI used by job 
+   search candidates. It integrates into the system the capability to process 
+   and extract relevant information about potential employers from online 
+   Glassdoor comments by employees, employers, and job seekers. These are 
+   processed using NLTK, the VADER sentiment analysis module, Postman’s API 
+   tool, and regular expressions.<br><br><span class="auto-style1">Exploring 
+   Word Embeddings</span>: In this project a GUI tool called The Embedding 
+   Explorer was developed to allow for interactive exploration of vector 
+   semantics and word embeddings. Applying Gensim's implemention of the word2vec 
+   algorithm to chunks of tokenized input texts, the system uses Matplotlib to 
+   produce plots visualizing word similarity, lexical relations, and other 
+   factors identified with NLTK and Scikit-Learn, rendered via the PyQt GUI 
+   toolkit.<br><br><span class="auto-style1">An Algorithm for Identifying a 
+   Story’s Premise</span>: This project developed a tool that can both point 
+   writers to snippets of their story that most relate to its premise, and 
+   suggest interesting character descriptions to use in a premise and other 
+   marketing material. This is in contrast to online tools like summarizing.biz, 
+   autosummarizer.com, summarizetool.com, and textcompactor.com which only 
+   perform summarization. The system queries the user about character roles, and 
+   then the input text undergoes preprocessing, lexical expansion, sentiment 
+   analysis, and information extraction for wh- type questions (factual 
+   information about the characters, and opinions about them). Using knowledge 
+   about the three-act structure of stories, the algorithm generates and scores 
+   possible responses and returns the best premise statement.<br><br>
+   <span class="auto-style1">Speech to Drone</span>: This project created an 
+   automatic speech recognition pipeline that allows a human agent to control a 
+   Tello drone in real time with spoken language. It uses the Python 
+   speech_recognition module to connect to Google's voice recognition API and 
+   the easytello wrapper for generating drone commands. The user speaks into a 
+   mic, the audio is sent to Google ASR, and the transcription is returned; 
+   since results aren't perfect, a fuzzywuzzy module analysis and custom 
+   processing maps the recognized text to drone control commands. The system was 
+   demonstrated with the voice-commanded drone flying around the classroom.<br><br><span class="auto-style1">
+   N-Gram and Word Representations for Authorship Attribution:</span> This 
+   project developed a bootstrap aggregation of recurrent neural network (RNN) 
+   models trained for authorship attribution. Each ResNet-34 model was trained 
+   to identify a continuous phrase of 100 words written by a particular author 
+   using 3-gram and word feature representations. This allows the RNNs to 
+   identify a single author’s style without having to model every author’s 
+   style. The data consisted of about a half-million words from each author's 
+   works in the 19th century, specifically H.G. Wells, Jules Verne, Charles 
+   Dickens, Jane Austen, and Mark Twain.<span class="auto-style1"><br><br>
+   Haitian Machine Translation:</span> This project built a neural machine 
+   translation system for Haitian Creole, a low-resource language. Texts used 
+   for training included: General Conference talks scraped from the Web and 
+   aligned with the Okapi Rainbow framework, plus content from the OPUS corpus. 
+   Training was done on a PyTorch transformer translation network developed as 
+   part of a BYU CS course.<br><br><span class="auto-style1">An Exploration of 
+   Document-Level Reading Time Prediction:</span> This project employed machine 
+   learning techniques to predict the time it would take to read a given short 
+   text, based on previously collected experimental data from over 1,000 human 
+   subjects. Basic extracted feature models include a vanilla Linear Regression 
+   with only the number of words variable (“word”), a Ridge regression model 
+   with all variables (“all”), Random Forests, K-Nearest Neighbors, and a 
+   Multi-Layered Perceptron (MLP).&nbsp; The project also used modern neural networks to 
+   embed the text as a document embedding, using a linear output layer for 
+   regression. Various state-of-the-art embedding models were evaluated including 
+   roBERTa, XLNet, and ELMo. Simpler models ended up being the most competitive 
+   (Random Forest, Linear Regression and a 240 words per minute calculation). In 
+   fact, one finding was that the number of words was the sole critical factor in 
+   predicting reading time, despite having variables such as education level, 
+   readability, age, or even familiarity with the subject matter.<br><br>
+   <span class="auto-style1">Wikipedia Factoid Question Answering</span>: This 
+   project developed a question answering system based on Wikipedia content. 
+   Queries were processed for content and enriched with lexical annotations and 
+   relations, and then sent to the Wikipedia API. Returned pages were tokenized, 
+   underwent named entity extraction and pattern matching, scoring (using such 
+   metrics as Levenshtein Edit Distance and the fuzzywuzzy library), and 
+   part-of-speech matching. Sentences are each scored, and the best are 
+   returned. Evaluation was done by hand on 100 questions, with 66 being 
+   answered correctly, 25 incorrectly and 9 with no answer returned.<br><br><span class="auto-style1">
+   Plautdietsch Forced Alignment:</span> This project used the Montreal Forced 
+   Aligner to transcribe the audio track from a video in Plattdeutsch, a dialect 
+   of Low German. Preprocessing (transcription and segmentation) was done using 
+   the ELAN annotation tool, and alignment was done using the off-the-shelf 
+   pronunciation dictionary for High German. <br><span class="auto-style1"><br>
+   Synonym Replacement in Text Simplification:</span> This project implemented 
+   and compared two strategies for simplifying arbitrary English text: synonym 
+   preplacement and synonym/hypernym replacement. Tokenization, POS tagging, and 
+   lemmatization were performed with SpaCy and NLTK. Word frequencies were 
+   rank-compared against the COCA corpus and thresholding determined 
+   replacement. Evaluation was done by using the Dale-Chall readability formula 
+   pre- and post-processing. The combined synonym/hypernym replacement method 
+   reduced reading level by one grade without substantially sacrificing 
+   readability.<br><br><span class="auto-style1">Using Word Vectors for 
+   Political Topic Analysis of Russian and English<span class="auto-style6">
+   </span>
+   <a href="news:%20Thid%20project%20developed%20two%20word2vec%20embeddings%20(English%20and%20Russian">
+   <span class="auto-style6">News</span></a></span><a class="auto-style5" href="news:%20Thid%20project%20developed%20two%20word2vec%20embeddings%20(English%20and%20Russian">:
+   <span class="auto-style6">This project developed two word2vec embeddings 
+   (English and Russian</span></a>), each based on a custom corpus of recent 
+   web-scraped news stories amounting to hundreds of thousands of words in each 
+   language. Each model had about 200,000 vocabulary words represented by 
+   100-dimension vectors. Basic vector-based operations such as translation and 
+   vector subtraction yielded interesting semantic similarity and other 
+   relations. These were also visualized using MatPlot scatterplots.<br><br>
+   <span class="auto-style1">NLPServer for ExecSec</span>: This project uses NLP 
+   techniques built on a RESTful API to receive text messages for meeting 
+   requests, consults Google Sheets to assess availability, schedules a meeting, 
+   and generates a natural-language text in response. It tokenizes the input, 
+   generates coreNLP’s dependency parses, uses information extraction to fill 
+   templates with targeted information, produces a finite state machine to 
+   manage conversation, and leverages directed weighted graphs to generate 
+   responses. <br><br><span class="auto-style1">Separated Phrasal Verbs and 
+   N-gram Language Models</span>: This project demonstrated and quantified how 
+   n-gram statistical language models are ill-suited for capturing long-distance 
+   dependencies, in particular English phrasal verbs. The 43,000-plus sentences 
+   from the Wall Street Journal section of the Penn Treebank-3 were processed, 
+   and 2,895 sentences were found that had such constructions, 183 of which 
+   exhibited discontinuities. OpenGrm was used to produce a smoothed bigram 
+   language model which was used to compute log-probabilities that describe the 
+   effects of separating the particle from its verb.<br><br><span class="auto-style1">
+   Autogloss: An Approach to Automatically Glossing Classical Latin Texts:</span> 
+   This project developed a glossing tool for classical Latin text. 
+   Morphological analysis is performed by a custom-designed engine in Python, 
+   and dictionary lookup was performed via the Logeion API and either the 
+   Frieze-Dennison Aeneid lexicon entry or the Lewis &amp; Short dictionary entry. 
+   The output is rendered in HTML using a Jinja2 template. Evaluation was 
+   performed against content from Caesar's Gallic Wars from the PROIEL treebank 
+   XML.<br><span class="auto-style1"><br>Song Lyric Generation and 
+   Classification:</span> This project developed a recurrent neural net and a 
+   GPT-2 transformer-based language model to generate song lyrics. Using the 
+   Kaggle lyrics dataset and the ChurchofJesusChrist.org website, over 55,000 
+   songs were collected; a subset consisting of 10 representative artists from 
+   each of four genres (pop, rock, country, and hymn) totaling 1,000 songs per 
+   genre was used to train the system to generate lyrics. For subsequent 
+   classification of the generated lyrics, a Keras sequential model with an 
+   embedding layer, GRU, and Dense layer with a softmax evaluation was used. <br>
+   <span class="auto-style1"><br>Interactive 
+   word-sense disambiguation for on-the-spot machine translation</span>: MT 
+   engines face difficulty when encountering highly ambiguous words; this 
+   project created an interactive interface for allowing a user to resolve 
+   word-sense ambiguity on-the-spot. Input sentences are processed with NLTK's 
+   tokenization and WordNet interfaces, and then the Datamuse lexical query 
+   engine API. A GUI presents the user with possible synonyms for ambiguous 
+   words, upon which the appropriate meaning is sent with the sentence to the 
+   Aperium rule-based MT and Google neural MT engines, allowing each to generate 
+   more appropriate output.<br><br>
+   <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-ascii-theme-font:major-bidi;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">
+   <span class="auto-style1">A Spanish CCG Parser</span>: In this project a 
+   Combinatory Categorial Grammar parser was developed for Spanish using the 
+   OpenCCG toolkit. System components were engineered to provide lexicon 
+   entries, morpheme definitions, lexical categories, and combination rules. A 
+   corpus based on the DEFT Spanish Treebank was developed for system 
+   evaluation.<br><br><span class="auto-style1">Naïve Event Extraction of 
+   Fiction Novels through Clustering</span>: This project addressed automatic 
+   event extraction in works of fiction. Processing involved a pipeline 
+   performing: tokenization, POS tagging, named entity extraction, phrase 
+   chunking, dependency parsing, and clustering. Performance was evaluated 
+   against a gold standard built from a short story of about 5500 words.<br><br>
+   <span class="auto-style1">Machine-Recommended Chinese Character Learning</span>: 
+   This project used machine learning to supply a suggested ordering of Chinese 
+   characters to learn based on an input corpus. Trained on a corpus of LDS 
+   General Conference talks containing well over 1 million characters, various 
+   generative models were developed and tested using Heaps' Law.<br><br>
+   <span class="auto-style1">Topic Modeling to Model Understanding</span>: In 
+   this project topic modeling software (specifically the Labeled Anchors 
+   algorithm) is used to predict topic labels from a corpus of science textbooks 
+   from the OpenStax repository. Simulations show how well labeled questions 
+   from the corpus would perform in topic-related computer-adaptive testing 
+   scenarios. <br><br><span class="auto-style1">Automatic Message Identification 
+   in <em>Elephas maximus</em></span>: This project developed a neural speech 
+   recognition engine capable of classifying vocalizations made by wild African 
+   elephants in Uda Walawe National Park in SriLanka between 2006 and 2007, 
+   according to the 14 categories identified by Shermin de Silva in the Asian 
+   Elephant Vocalizations dataset. 4,366 annotated instances were pre-processed&nbsp; 
+   (using NLTK's NumPy, and SciPy) and learned via a TensorFlow convolutional 
+   neural network trained on the sound spectrograms. Over 70% accuracy was 
+   achieved using mel-frequency cepstrum coefficients and audio length features.<br>
+   <br><span class="auto-style1">Learning to Transfer: Meta-Learning-Based 
+   Optimizers for Fine-Tuning Pre-Trained Language Models to Small Datasets</span>: 
+   Recent advances in transfer learning for NLP can produce pretrained, neural 
+   language models which achieve state-of-the-art results for a variety of 
+   tasks. However, it yields limited performance for small training sets.
+   <span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,serif; mso-ascii-theme-font: major-bidi; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: major-bidi; mso-bidi-theme-font: major-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+   This project proposed a meta-learning-based optimizer that learns to 
+   fine-tune pretrained language model weights for small data set tasks. 
+   Evaluation was on sentiment classification tasks with few training instances, 
+   and it<br>outperformed conventional fine-tuning procedures that use the ADAM 
+   algorithm.</span> </span><br><br><span class="auto-style1">Building a 
+   Cantonese Part-of-Speech tagger</span>: Though part-of-speech (POS) taggers 
+   achieve good performance in Mandarin Chinese, the same cannot be said for 
+   Cantonese. The goal of this project was to develop a Cantonese POS tagger. 
+   Using the Hong Kong Cantonese Corpus, the PyCantonese library, and the 
+   Peita-Fujitsu-Renmin Ribao (PFR) tagset, a decision-tree-based tagger was 
+   created using the Scikit-learn machine learning library. Accuracy was over 
+   88%.<br><br><span class="auto-style1">Assessing Grew and Malt</span>: Grew is 
+   a graph-theoretical framework for dependency processing, and Malt is a 
+   dependency parser. This project conducted a thorough evaluation of both 
+   parsers using the Sequoia treebank format, the French WIkipedia corpus, 
+   Hunspell resources, and TurkuNLP pipeline components. Models were trained 
+   with the Lemming and MarMoT toolkits. Once the parsing was completed, the 
+   results were stored in MonetDB for subsequent statistical analysis and 
+   topological relation extraction.<br><br><span class="auto-style1">PersCCG: A 
+   Combinatory Categorial Grammar Parser for Persian</span>: This project 
+   involved developing a syntax parser for Persian/Farsi within the catagorial 
+   grammar formalism using the OpenCCG toolkit. Lexicon entries, morphemes, 
+   categories, and rules were developed and coded into the system. A corpus of 
+   352 sentences from a reference grammer was used for evaluation: 91% of them 
+   were parsed correctly.<span class="auto-style1"><br><br>Conditional Random 
+   Fields for Parsing Morphologically Complex Languages</span>: Traditional 
+   rule-based and machine learning techniques are used successfully for parsing 
+   morphological structure of analytic, fusional, and agglutinative languages, 
+   but are less helpful for complex polysynthetic languages. Recent work with 
+   conditional random fields (CRF's) shows some promise. In this project 
+   preliminary attempts were made to work with a CRF engine (from the SciKit 
+   Learn Python package), using French (a complex fusional language) as a test 
+   case. A pipeline was built using the BDLex French morpholexical database, the 
+   SpaCy French tokenizer and named entity recognizer, and the CRF module. 
+   Tested against the billion-word French GigaWord corpus, the system achieved 
+   precision and recall values of over 96%.<br><br><span class="auto-style1">
+   ACSIA: Autonomous Computerized Simultaneous Interpreter Aid</span>: 
+   Simultaneous interpreters constantly deal with short-term memory constraints, 
+   and some types of language are particularly problematic: numbers, technical 
+   terminology, lists, and rare or low-frequency words. For this project all 
+   available English and Portuguese General Conference talks at lds.org were 
+   mined for bilingual vocabulary using SketchEngine. Then the audio from these 
+   talks was played through the IBM Watson speech transcriber; the resulting 
+   transcription was piped through a real-time interpretation dictionary 
+   displaying translations in a just-in-time GUI. Six English-to-Portuguese 
+   interpreters interpreted the talks, half with no ACSIA assistance and half 
+   with. BLEU score measurements showed that ACSIA provided a statistically 
+   significant advantage for difficult talks.<br><br><span class="auto-style1">A 
+   Japanese Semantic Dictionary</span>: Learning new vocabulary is essential for 
+   language learners, and particulary difficult for Japanese learners due to the 
+   complex writing system. Everyday, common conversational verbs (wagodoshi) are 
+   relatively easy to learn, whereas work-related, technical, formal verbs of 
+   Chinese (kangodoshi) are harder. For this project verbs were extracted from 
+   the Corpus of Spoken Japanese, frequency counts were calculated using the 
+   AntConc corpus analysis toolkit, and lexical relations (hypernyms, hyponyms, 
+   synonyms, and English translations) were extracted from the Japanese WordNet 
+   using the JAWSJAWS interface. With the htmlMaker program a website was 
+   developed to allow access to the resulting dictionary.s<br><br>
+   <span class="auto-style1">Egyptian Arabic Verb Frequency Counter</span>: 
+   Frequency lists can help students acquire a language, but they are difficult 
+   to produce for morphologically complex languages. In this project a 
+   custom-made corpus of Egyptian Arabic was processed using the MADAMIRA Arabic 
+   part-of-speech tagger, and the results (as expected) were lower for this 
+   dialect than for Modern Standard Arabic. Particularly problematic were 
+   negative forms, participles, and proper names. A feature-based 
+   regular-expression-based filter was developed in Python to exclude false 
+   positives, which improved precision/recall measures for these forms 
+   appreciably.&nbsp; <br><br><span class="auto-style1">Sentiment Analysis of 
+   Student Feedback on Online Courses</span>: In this project state-of-the-art 
+   sentiment analysis is performed on student comments about pilot online 
+   courses they participated in. The pipeline was run in Python and consisted of 
+   the Stanford coreNLP sentiment analysis system (written in Java) wrapped by 
+   the pycorenlp library. Data from several dozen pilot classes was run through 
+   the pipeline and loaded into SqliteStudio for subsequent analysis. A 
+   Cronbach's alpha test run against a hand-annotated gold subset yielded very 
+   good results, though reliability varied based on the number of responses for 
+   a particular class.<br><br><span class="auto-style1">An Instance-Based 
+   Learning Approach to Vocalization in Arabic</span>: Most modern Arabic texts 
+   omit vowels, which poses great difficulty for Arabic learners. For this 
+   project a pipeline was built to automatically insert vowels in Arabic text. 
+   Data from on the Qur'an, Sunnah, and the Bible were processed using Python 
+   text processing (with the JetBrains IDE), Stanford coreNLP's Arabic 
+   part-of-speech-tagger, and the TiMBL k-nearest-neighbor machine learning 
+   system. Cross-fold evaluation accuracy rates varied from 81-96%, depending on 
+   text type. <br><br><span class="auto-style1">Improving Topic Modeling with 
+   Vocabulary Feature Hashing</span>: Interactive topic models are useful for 
+   interacting with large bodies of text without the need for machine learning 
+   expertise, but they have limits (e.g. net-scale topic modeling is not yet 
+   feasible). This project improves the Anchor Words algorithm with feature 
+   hashing. About 20,000 documents sampled from different newsgroups were used 
+   to train the model using the Ankura code base, ScikitLearn's Multinomial 
+   Naive Bayes classifier, and various hashing increments. Using the optimal 
+   hashing value halved the topic modeling process while retaing topic quality.<br>
+   <br><span class="auto-style1">Legal Document Simplification using Vocabulary 
+   Replacement</span>: Many legal documents are too complex for the average 
+   reader to comprehend. This project uses text processing techniques in a 
+   Python application to read legal texts and perform vocabulary substitution. 
+   Using the TwinWord Scoring API, evocations, synonyms, related terms, hypoyms, 
+   and hypernyms were evaluated for difficulty and appropriate replacement words 
+   were selected. The program was run on the Utah Code, and evaluation by the 
+   Python textstat module and the Dale-Chall metric showed improved readability 
+   of the result.<br><br><span class="auto-style1">Uncovering English Question 
+   Acquisition in Learner Writing</span>: The language acquisition literature is 
+   replete with developmental sequences---typical stages that language learners 
+   go through. This project seeks to reveal acquisitional stages in the 
+   acquisition of English questions from written English-learner essays. A 
+   corpus of over 3,500 essays was processed for part of speech (using NLTK in 
+   Python) and dependency structure (using the Stanford Dependency Parser in 
+   Java). Regular expressions were coded to extract structures reflecting 
+   English question acquisitional stages. Then statistical analyses were run to 
+   correlate the tallied instances with individual essay scores. The result was 
+   a clearly revealed sequence in stages of acquisition across the corpus. <br><br><span class="auto-style1">Factoid Question 
+   Answering System</span>: Factoid questions elicit short answers of a factual 
+   nature. This system accepts a factoid query written in natural language (e.g. 
+   "What currency is used in China?"), which is then parsed by the Stanford NLP 
+   parser to extract semantic relations. The query is expanded with synonyms 
+   provided by WordNet. The result is then pipelined to a Prolog engine to match 
+   information stored in a database against the predicates extracted from the 
+   expanded query.<br><br><span class="auto-style1">A 
+   Contract Drafting Tool for Attorneys:</span> This project introduces a 
+   prototype system for assisting attorneys who are drafting merger and 
+   acquisition contracts. First, a relevant corpus was collected from the 
+   Security and Exchange Commission’s (SEC) Electronic Data Gathering, Analysis, 
+   and Retrieval (EDGAR) system. Preprocessing was done with Python tools and 
+   regular expression. The system then uses TF-IDF and K-means to cluster 
+   contract sections together. It then uses Skip-Thought vectors with a cluster 
+   of documents to train a neural net using the Theano toolkit. Using a cosine 
+   distance formula, the system determines and suggests text that may be missing 
+   from an input section. <span class="auto-style1"><br><br>A Parser for ASL 
+   Gloss</span>: This project applied the OpenCCG Categorial Grammar parser to 
+   data of American Sign Language (ASL) gloss gathered from The National Center 
+   for Sign Language and Gesture (NCSLGR) Corpus<span class="auto-style1">.<br>
+   <br>Document Retrieval with Sentiment Analysis:</span> In this project, 
+   sentiment analysis is used as a method to identify and retrieve documents 
+   that have already received a sentiment assessment. A document corpus is 
+   preprocessed (stop words removed, words tokenized and POS-tagged) and then a 
+   document word sentiment score is calculated using SentiWordNet. Over 62,000 
+   Tweets about the LDS October 2016 General Conference were collected and 
+   scored. Analyses were carried out comparing Tweets to the actual talk's 
+   content, gauging polarity by geolation, etc. For example, Georgia and 
+   Michigan generated Tweets that were the most negative about the talks. All 
+   speakers were analyzed for overall sentiment. <br><span class="auto-style1">
+   <br>A Cantonese Lyrics Suggestion Engine</span>: This project developed a 
+   pipeline system to simplify translating song lyrics from English to Cantonese 
+   (a tone language). Using the Praat speech manipulation tool and the Python 
+   language, it pairs up the English words with their Pingyum translations. The 
+   target selection from a song is analyzed with Praat to obtain the pitch 
+   contour. Notes are extracted, and their tones are computed. Using the CUHK 
+   Cantonese Spoken Language Corpus, aligned words with appropriate tones are 
+   suggested that maximize the tone-meoldy-meaning properties of the original 
+   song. A qualitative evaluation was performed by singing the suggested lyrics 
+   and detecting mismatches.<br><br><span class="auto-style1">The Arabic 
+   Readable Article Finding Tool</span>: This project developed a tool to assist 
+   second-language learners of Arabic to find reading material calibrated to 
+   their level. Written in Python, it uses the Arabic MADAMIRA server for 
+   lemmatization. Arabic news articles were collected via a web crawler, and a 
+   list of vocabulary words matching the student's reading level is used to 
+   compute the readability of each article; the system then provides the user 
+   with a set of recommended articles.<br><br><span class="auto-style1">Neural 
+   Machine Translation</span>: This project used the Google Tesorflow neural 
+   machine translation framework to develop a Spanish/English machine 
+   translation system in Python. It was trained on a parallel Spanish/English 
+   Wikipedia corpus obtained from the OPUS repository. Several RNN models were 
+   developed and compared with varying numbers of LSTM or GRU layers and a 
+   gradient descent optimizer. Training was done on the BYU supercomputer, and 
+   evaluation was carried out using the BLEU scoring regime. <br><br><span class="auto-style1">An Adapted k-Nearest 
+   Neighbor Algorithm for Internet Text Register Classification:</span> 
+   Categorization of Web documents is an essential part of information 
+   retrieval, but most topic-based approaches are unable to compensate for the 
+   differences in information that naturally occurs across internet registers. 
+   This project uses an adapted k-Nearest Neighbor approach programmed in Python 
+   to automatically classify internet documents into registers such as 
+   “opinion,” “narrative,” and “instructional.” Two discriminant analysis were 
+   performed in this project, one including a full set of 44 features, the other 
+   only including the most informative 10 features. Using only 10 features not 
+   only decreased the runtime by 378%, but also resulted in better precision and 
+   recall on the specific subregisters.<br><br><span class="auto-style1">Idiomatic Expressions in Chinese: An 
+   n-gram 
+   Approach</span>: One challenge that learners of Chinese often face is the 
+   identification and correct interpretation of idioms 
+   including popular sayings, names of people, groups, and companies, and 
+   frequent semantic collocations. This project employed an n-gram method to 
+   group Chinese characters into 4-grams and to rank them according to 
+   frequency. The data came from the Chinese Gigaword Corpus, which contains over 2 GBs of Chinese news reports 
+   from the year 1991 to 2002. Perl was used to process the data and prepare it 
+   for analysis, and two text editors 
+   (Notepad ++ and 010 Editor) were utilized to access the data and to run the Perl code. 
+   The project also used the N-gram Extraction toolkit created for CJK character 
+   processing.<br><br><span class="auto-style1">XLFG Grammar parser for Romanian</span>: 
+   This project involved developing a set of phrase structure grammar rules for 
+   Romanian using the XLFG parser. This included creating morphological set of 
+   rules, lexicon entries, and LFG-based description of syntactic constituency 
+   for Romanian language, as well as encoding them in the metalinguistic 
+   formalism used by the workbench. Testing was done on a corpus of sentences 
+   from a translation of Plato's Republica.<br><br><span class="auto-style1">
+   Haskell CCG: A Functional Implementation of the Combinatory Categorial 
+   Grammar Framework:</span> The Combinatory Categorial Grammar (CCG) framework 
+   provides a mildly context-sensitive implementation of categorial grammar, 
+   permitting the handling of several elements of natural language not typically 
+   possible in purely context-free grammars such as scrambling, long distance 
+   dependencies, etc. This project resulted in the implementation of a CCG 
+   parser in the programming language Haskell. The parser is built on an 
+   implementation of Valiant’s algorithm, which treats the CYK parsing algorithm 
+   as a series scalar products taken on the row and column vectors of a parse 
+   matrix. The code is freely available under the MIT licence at github.org. <br><br><span class="auto-style1">
+   Predicting Sentiment and Usefulness in Text Reviews:</span> This work 
+   introduces Biston, a sentiment predictor which builds off earlier work with 
+   the Calliope Sentiment Parser Series to introduce new metrics for usefulness 
+   prediction. By extracting features from the text, machine learning models are 
+   then used to predict how useful a given review will be. Initial results are 
+   promising. Biston identifies the most useful reviews with recall rates of 
+   over 85%.<br><span class="auto-style1"><br>Analogical Modeling 
+   for Arabic Dialect Recognition</span>: In this project Tweets written by 
+   Arabs for an Arab audience were collected in three Arabic dialects: Egyptian, 
+   Moroccan, and Lebanese. After the data was partitioned into training/testing 
+   sets, the training portion was Romanized and coded into feature vectors for 
+   processing by the Analogical Modeling system. The unseen test data was then 
+   analyzed by the system. Performance was best on identifying Egyptian, and 
+   least successful for the Moroccan dialect.<span class="auto-style1"> </span>&nbsp;<br>
+   <br><span class="auto-style1">Statistical Machine Translation between 
+   Cantonese Jyutping and English:</span> This project used the Moses machine 
+   translation framework to develop Cantonese-English and English-Cantonese 
+   translation systems. A bilingual corpus was collected that consists of Hong 
+   Kong Hansard legislative debates in Cantonese and English. An open-source 
+   tool provided Chinese character to Jyutping (and vice-versa) conversion. The 
+   systems were trained on the bitex and then evaluated using the BLEU score. 
+   Given the relatively small corpus, this project achieved very reasonable 
+   scores in both directions.<br><br><span class="auto-style1">American English 
+   Dialect Recognition</span>: This project resulted in a speech recognition 
+   system that could detect which of eight dialects of American English was 
+   represented in utterances by speakers. Randomly chosen annotated recordings 
+   from the TIMIT Corpus were used to train the Kaldi speech recognition system. 
+   Machine learning on Mel-crequency cepstral coefficients extracted from 25 
+   millisecond windows provided the classification regime. Unseen data from the 
+   TIMIT corpus was used to test system performance. Best performance was 
+   achieved on the Southern dialect, with worst performance on the Army Brat 
+   category.<br><br><span class="auto-style1">English-to-IPA Transcription</span>: 
+   This project, written in Perl, reads in and tokenizes arbitrary English text, 
+   then matches the tokens against entries in the CMU Pronouncing Dictionary. 
+   The results are then fed to a specially designed ARPABET-to-IPA conversion 
+   routine, and the result returned as a stream of IPA characters. <br>
+   <span class="auto-style1"><br>Typsetting Bitext:</span> This project produced 
+   a Perl parser that takes input of aligned bilingual text in TMX format. It 
+   then performs Unicode-to-TeX character conversion, formats the input data for 
+   interleaved display, outputs the data in LaTeX format, and runs pdflatex to 
+   produce a PDF document. Evaluation was run on several General Conference 
+   talks and their translations from lds.org.<span class="auto-style1"><br><br>Inquire: A Factoid 
+   Question Answering System</span>: A three-stage pipeline was developed to 
+   answer factoid questions: document retrieval, question classification, and 
+   answer extraction. The Microsoft Bing API was used for document retrieval, a 
+   linear support vector machine for guessing question type, and named-entity 
+   recognizer for extraction.The pipeline was built in Python and several 
+   associated natural language processing tools.<br><br>
+   <span class="auto-style1">Eastern Armenian in NooJ</span>: A morphological processor and text engine for Eastern 
+   Armenian was developed using the NooJ platform. In addition, a dictionary of 
+   several hundred forms was created. Inflectional and derivational forms are 
+   handled by the system.<br><br>
+   
+   <span class="auto-style1">Korean Verbal Morphology Generation and Analysis without Romanization</span>: This project developed a finite-state system for analyzing and generating 
+   Korean verbal forms directly in Hangul orthography, instead of through 
+   Romanization. A pre-release version of the Kleene system served as the 
+   implementation platform. <br><br><span class="auto-style1">
+   Stream-KIMMO: On-line Morphological Analysis and Applications to 
+   Tokenization:</span> This 
+   project implemented a modification the PC-KIMMO two-level morphological
+   analysis system that allows it to be used as the lexicon in a 
+   dictionary-based tokenization system. On-line consultation of a dictionary 
+   avoids the need to store all possible words, and allows for efficient 
+   tokenization of English and Turkish. The work involved using an appropriate 
+   FSA interface for a morphologically-aware dictionary. This streaming KIMMO 
+   implementation wasbased on PyKIMMO from the Python Natural Language Toolkit 
+   (NLTK), a Python-language port of PC-KIMMO version 1. A precision/recall 
+   evaluation was made for English and Turkish.<br><br><span class="auto-style1">Sentiment Analysis of Film Reviews</span>:
+   This project explored three different approaches in classifying the overall polarity of movie 
+   reviews: a naïve approach, a boosted vocabulary approach, and the 
+   use of machine learning. For each approach a pipeline was created to classify movie reviews 
+   as positive or negative. An 
+   annotated corpus of around 700 positive and 700 negative reviews was analyzed 
+   by the systems. The pipeline used Perl for sentence level classification, 
+   array/hash initialization, keyword searching, feature extraction and training 
+   set creation. SentiWordNet was used as a lexical resource for the purposes of 
+   populating hashes and sentiment values. The Tilburg Memory-Based Learner 
+   (TiMBL) system was used for machine learning.
+     <br><br><span class="auto-style1">Predicting Aspect 
+   Correlation Through Sentiment:</span> This project developed a sentiment 
+   analysis component for processing of user feedback from over a thousand 
+   customer service satisfaction surveys. In particular, whereas aspect sentiment has been shown to improve 
+   prediction of overall sentiment, prediction of correlation between overall 
+   sentiment and aspect sentiment has not been addressed in academic literature.
+    This correlational study tokenized, parsed, and processed data from a technical support office to predict that 
+   correlation with the R statistical tool to complete its analysis using Naive 
+   Bayes and maximum likelihood estimators.<span class="auto-style1"><br><br>
+   White Hmong Moses: Machine Translation of Religious Texts:</span> In this 
+   project a statistically based machine translation system was developed for 
+   White Hmong. A corpus of aligned bitext was collected and curated. The Moses 
+   MT framework was used to develop the machine translation system. The BLEU 
+   score method was used to evaluate performance of the system.</div>
+   <p class="auto-style4">
+   &nbsp;</p>
+   <p class="auto-style4"><span class="auto-style1">Perl-based Guarani 
+   Translation System using Parallel Corpora:</span> Guarani is an indigenous 
+   language spoken in Paraguay by 6 million people. This project developed a 
+   Perl-based system that leverages English/Guarani bitext to translate 
+   individual words. The user types a search pattern, and the program will finds 
+   all passages with that pattern. Based on what words occur in the matched 
+   verses, together with how often they occur in the entire corpus, the program 
+   guesses the meaning of the word. There are also other features, such as 
+   printing out every matched passage (in both languages), and ways to just look 
+   at affixes on the search pattern. The system is easily customizable for 
+   particular texts, dictionaries, or even languages.
+   <span lang="en-US" style="font-size:10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:windowtext;mso-ansi-language:#0400;mso-fareast-language:#0400;mso-bidi-language:
+X-NONE"><o:p></o:p></span></p>
+   <span class="auto-style1"><br>Automatically scoring Arabic-English human 
+   translations:</span> This project performed three automated scoring 
+   evaluations of student translations. Metrics were provided by BLEU, NIST 
+   technologies, and a link grammar parser. The principal question was to 
+   evaluate whether the NIST or BLEU calculated scores derived from the results 
+   of a link grammar parser correlate with a hand-graded score on student 
+   translation tests from Arabic to English<span style="mso-spacerun:yes">, 
+   whereas t</span>raditional use of BLEU and NIST technologies have been to 
+   evaluate <i>machine</i> translation output. The findings of this research 
+   indicate a strong correlation between human evaluation scores and the BLEU 
+   and NIST scores and a weak correlation between the former and the scores 
+   derived from the link grammar parser, indicating further study of the use of 
+   BLEU and NIST scores in evaluating human performance should at the very least 
+   be explored further.<span style="mso-spacerun:yes">&nbsp; </span><o:p></o:p>
+   
+   <p class="MsoNormal"><span class="auto-style1">Colloquial Arabic vocabulary 
+   processing tools:</span> Egyptian Colloquial Arabic (ECA) is the most widely 
+   understood Arabic dialect with over 80 million native speakers. However, most 
+   second language education of Arabic for native English speakers is focused on 
+   Modern Standard Arabic (MSA) which is used almost exclusively in formal 
+   settings by educated Arabs.<span style="mso-spacerun:yes"> BYU</span> is 
+   unique in its Arabic language program in that both MSA and ECA are taught in 
+   tandem.<span style="mso-spacerun:yes">&nbsp; </span>One weakness<span style="mso-spacerun:yes">&nbsp;
+   </span>of the ECA instruction though is its lack of a systematic vocabulary 
+   study tool based on word difficulty.<span style="mso-spacerun:yes">&nbsp;</span>This 
+   project involves developing a set of tools to address the problems of 
+   translation accuracy, list creation, and extracting vocabulary from ECA 
+   electronic texts in a systematic way. The tools used for this task are the 
+   Buckwalter Arabic Morphological Analyzer (BAMA) obtained from the LDC; two 
+   corpora: 1. ‘Awladna fi London’ (an Egyptian play) 2. The CallHome Egyptian 
+   Arabic corpus (transcriptions of telephone conversations created by the LDC); 
+   and a set of Perl scripts for data preparation and processing.</p>
+   <p class="auto-style2">
+   <span style="font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">
+   J<span class="auto-style1">XNL-</span></span><span class="auto-style1" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black;mso-fareast-language:ZH-CN">Soar: 
+   cognitive modeling of Japanese sentence process<o:p>ing:</o:p></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black;mso-fareast-language:ZH-CN">&nbsp;
+   </span>
+   <span class="auto-style3">This project resulted in the development of a
+   </span>
+   <span style="font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black;mso-fareast-language:ZH-CN">syntactic 
+   parser built using a cognitive modeling architecture, Soar. The parser 
+   constitutes an implementation of a system theorized to </span>
+   <span style="font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;mso-fareast-language:
+ZH-CN">model parsing breakdown using the NL-Soar system and its successor, 
+   XNL-Soar. The system is shown to exhibit capabilities similar to those of 
+   humans. </span>
+   <span style="font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;
+mso-fareast-language:ZH-CN">To segment sentences into words, the system uses 
+   GoSen, an open source Java-based morphological analyzer for Japanese. GoSen 
+   splits sentences into individual words based on a </span>
+   <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;MS Mincho&quot;;color:black">Vi</span><span style="font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;
+mso-fareast-language:ZH-CN">terbi search and word </span>
+   <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;MS Mincho&quot;;color:black">n-gram </span>
+   <span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black;mso-fareast-language:ZH-CN">probabilities provided by the IPADIC 
+   dictionary. It also uses IPADIC to annotate morphemes for information about 
+   part of speech and conjugation. During lexical access in JXNL-Soar, Japanese 
+   WordNet is also accessed for semantic information, such as synset number and 
+   semantic class. Incremental visualization of the syntactic parse trees is 
+   provided via </span>
+   <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;mso-fareast-language:
+ZH-CN">Perl, which</span><span style="font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;
+mso-fareast-language:ZH-CN"> parses Soar’s working memory, produces dot code, 
+   and calls GraphViz to create the actual graphs. </span></p>
+   <p><u>Creating a feature-tagged database of French sentences:</u> This project 
+resulted in the development of an automatic retrieval tool for annotated French 
+elicited imitation test items. It extracts sentences from the French GigaWord 
+corpus and tokenizes then via Perl, then retrieves lexical information from 
+Lexique, BDLex, and the Frequency Dictionary of French. The sentences are parsed 
+using the Bonsai platform that includes the Berkeley parser. POS tagging is done 
+via TreeTagger. The sentences are then loaded into a mySQL database. Retrieval 
+of the sentences is possible via database queries and TRegex regular 
+expressions.</p>
+	<p>
+	<span style="font-size: 11.0pt; line-height: 115%; font-family: &#39;Times New Roman&#39;,serif; text-decoration: underline">
+	Word Sense Disambiguation via Translation:</span><span style="font-size: 11.0pt; line-height: 115%; font-family: &#39;Times New Roman&#39;,serif"> 
+	T</span>his project takes English and Japanese sentences from the user and 
+	submits them to Google Translate. Words from the English sentence are mapped 
+	to WordNet to retrieve sense information, and the same is done for Japanese 
+	using the Japanese WordNet. Using the Google translation crosslinguistic 
+	word alignments are posited. The LingPipe implementation of a k-NN 
+	classifier is used (via Perl, Python, and Jython) to classify word sense 
+	matches. Several thousand sentences from a Japanese/English law corpus were 
+	also processed using GIZA++ to train the classifier.</p>
+	<p><u>Retooling AML for language identification:</u> This project implemented 
+the core engine in the AML language modeling system for the purposes of language
+ identification. It extended the AML engine with the ability to handle free-form
+ data, multiple data files, dynamic outcome files, new configuration options,
+ and the choice of several statistical algorithms to analyse the results.
+The implementation was developed in Perl, trained on current news reports
+about the Kosovo crisis, and was successful in discriminating between short
+samples of various languages' texts, even involving typologically similar
+languages (e.g. English vs. German or French vs. Spanish). </p>
+   
+<p><u>Automatic word sense disambiguation using a WordNet-based algorithm:</u> 
+This project involved determining the word sense of polysemous and homonymous 
+nouns by examining their occurrence in verbal contexts. Resources employed 
+include the Brown Corpus, Princeton's WordNet, and modified semantic similarity 
+measuring algorithm used in other NLP applications. The implementation was 
+developed in C++, including establishing a component of Folio Infobase code 
+that was isolated into a single C++ class. </p>
+   
+<p><u>Topic division by content clustering:</u> This project performed segmentation 
+ of text into clusters of related content-specific subsections. The project 
+ was implemented in C++ and used&nbsp; various clustering algorithms for content
+analysis, as well as Quattro Pro to analyze the results. Resources used included
+several hundred Wall Street Journal articles concatenated together with no
+distinguishable delineation, and the Qtag part-of-speech tagging engine.
+</p>
+   
+<p><u>New approaches to dialogue simulation:</u> This project produced a dialog
+simulation engine whose core leverages a genetic algorithm (from MIT's GALib)
+to determine the most appropriate response to an input. This was a large-scale
+implementation that takes text input, parses it using CMU's Link Grammar
+parser, consults Princeton's WordNet for lexical-semantic information,&nbsp; 
+determines the relevant speech act, performs a GA-based search for the best 
+response, and sends the output to a text-to-speech system using Microsoft's 
+SAPI SDK and speech engine. The code system was written in C++ and seamlessly 
+integrates several API's for the resources mentioned above. </p>
+   
+<p><u>Automatic dataset generation for analogical modeling:</u> This project 
+produced  a tool that allows users to more easily specify and encode datasets 
+for Skousen's AML engine, especially when they can be generated by the output 
+of PC-Kimmo, a two-level finite-state machine development environment. The 
+system, which is written in C,&nbsp; permits user specification of requisite 
+patterns, mapping of relevant data items to the AML data representation, and
+frequency-based handling of ambiguity, all using regular expressions and
+other widely-used techniques. </p>
+   
+<p><u>Sentence boundary detection by analogy:</u> This project involved the 
+development  of a sentence-boundary detector for English and comparing various 
+techniques  including memory-based processing (TIMBL), analogical modelling, 
+and rule-based  approaches. The primary result was implemented in Perl and 
+involves various  routines to take into account linguistic, metalinguistic, 
+and formatting information. A substantial corpus of Wall Street Journal documents 
+was used in developing, training, and testing the system. </p>
+   
+<p><u>An LFG parser for German:</u> This project involved developing a phrase-structure 
+ grammar for German using Stanford's Lexical-Functional Grammar Workbench. 
+ This included developing morphological formation rules, lexicon entries, 
+and LFG-based descriptions of syntactic constituency for the German language, 
+ as well as encoding them in the metalinguistic formalism used by the workbench. 
+ </p>
+   
+<p><u>A family relationships parser:</u> This project resulted in an engine 
+that  reasons about family relationships based on partial or incomplete information, 
+ performing forward inferencing from a set of facts and predicates extracted 
+ from natural text. It is implemented in Prolog, is based on the Gazdar/Mellish 
+ parser, and draws conclusions in the domain from basic natural-language factual
+statements. </p>
+   
+<p><u>Hypernym semantic hierarchies for paragraph-scope text classification:</u> 
+ This project resulted in an approach that allows individual paragraphs in
+ a document to be classified for semantic content based on lexical semantic 
+ relationships such as hypernymy other hierarchical relationships between 
+concepts. Processing involved using Qtag, a Java-based part-of-speech tagger, 
+Princeton's WordNet, geometrical distance measure algorithms implemented in
+C++, and postprocessing/GUI output using Folio Views technology. </p>
+   
+<p><u>Adapting instance-based methods for classifying natural language text:</u> 
+ This project combined and refined traditional text classification methods 
+ such as instance-based approaches, prototype representation, and distance 
+ metric calculations within a system designed to classify documents. Over 
+3000 documents from the Wall Street Journal were used as training data by 
+the system which was encoded in C++. </p>
+   
+<p><u>Modifications to the Cangjie input system for Chinese characters:</u> 
+This  project involved developing a new method for Chinese character keyboard 
+input which performs context-dependent, trigram-based disambiguation of characters,
+ thus obviating the need for frequent interaction and therefore enabling
+touch-typing  or "typing blind". This approach is implemented in Perl/Tk,
+employs lookup-tables  and regular expressions for pattern matching, and
+produces (and leverages)  a strokewise decomposition of characters recognitionally
+and in generation.  </p>
+   
+<p><u>Text annotation manager:</u> This project implements a tagging capability 
+for Microsoft Word documents using Visual Basic for Applications (VBA) automation.&nbsp;
+ This provides the functionality to include markup in a document, while at
+ the same time hiding the markup from the user. Markup can include bookmarks,
+ comments, special key sequences, bitext alignment equivalency range delimitation,
+ and contextually-driven machine translation output postediting. </p>
+   
+<p><u>Crosslingual text classification: Japanese web-page classification with
+an English classifier:</u> This project involves plugging in a machine translation
+(MT) system to a framework where comparable results in Japanese can be attained
+without any Japanese training data.&nbsp; The fact that a MT system is feasible
+in a text classification problem works under some important assumptions about
+how text classification algorithms work and how the current state-of-the-art
+MT systems perform. The algorithm involves three different classifiers: decision
+tree, Naïve Bayes, and a boosted decision tree. </p>
+   
+<p><u>Web-based KWIC listings for Arabic:</u> This project resulted in a key-word-in-context
+ listing facility that runs on the Web for displaying Arabic words. It included
+ formatting data at an 800x600 dpi resolution and uses the Parkinson method
+ for romanization of Arabic for input boxes for search keywords and parameters.
+ It was written in Perl and runs on an Apache server. Unicode was chosen
+as the Arabic font, which entailed translation from hexadecimal codes used
+by Parkinson. </p>
+   
+<p><u>The linguists’ APR: an automatic pattern recognizer for morphology:</u> 
+This project was developed to ease the acquisition of morphological knowledge, 
+ by providing a simple interface for any speaker of the language to train 
+it.&nbsp; It uses directed graphs to match morphological patterns, and then 
+compacts them into a table which is in a standard form. More user-friendly 
+acquisition of data for other morphological engines such as PC-Kimmo is a 
+result of this project. </p>
+   
+<p><u>Foreign language recognition system:</u> This project involved building 
+a system that identifies a language from a spoken sample, based solely on 
+the acoustic qualities of the wave, rather than phonetic qualities. The process
+ is extremely processor-intensive, and hence it involves a networked system
+ and distributed processing over several computers. Inspired by text categorization
+ approaches, the same method of searching for and weighting features in a
+text was extended to features in sound waves.&nbsp; A vector file of features
+is built from sound waves—one from each language to recognize, sand the vector
+ file undergoes several statistical and neural network processing stages.
+Various acoustic signal and statistical toolkits were used, as well as Java
+as AudioInputStreams, SoundSegment, and SoundWave classes. </p>
+   
+<p><u>Recipe Central NLP:</u> This project took recipes stored in the popular 
+MasterCook&nbsp; program and extracted them into the Cogito knowledge data 
+base, to enable various computer-assisted recipe and cooking tasks. The Cogito 
+knowledge center allows for information organization in engineering and other 
+applications to a degree that before required a heterogeneous approach. Relevant 
+libraries include: an instance library, a language library, a classification 
+library, and an attribute library. </p>
+   
+<p><u>Language reconstruction via genetic programming:</u> This project used 
+a genetic algorithm/machine learning approach to historical reconstruction, 
+modeling how several daughter languages could have "descended'' over time 
+from a common ancestor language. Based on MIT's GAlib for genetic-algorithm-based 
+programming, the system takes a population of words related to a source word. 
+For each generation, the system uses a non-fixed single point crossover system 
+constructing novel combinations from the most fit two members of the surviving 
+population. Then a mutation operator randomly selects some percentage of the
+population and introduces random change. <br>
+  The above process repeats until the stopping criterion is reached. </p>
+   
+<p><u>Extracting predicate-argument structures from news headlines:</u> This 
+project  presented a way of doing information extraction of semantic content 
+from newspaper headlines.&nbsp; The system has three components: (i)&nbsp; 
+the Link-Grammar parser, a dependency-based syntactic parser implemented in
+the C language, (ii) the Lingua::LinkParser module written in Perl, and (iii)
+a library of regular expressions. Headlines are extracted from the html source
+code of popular newspaper webpages and sent through the Link-Grammar parser.
+Then the Lingua::LinkParser module extracts the linkage information and outputs
+it to a Perl regular expression module to determine what kind of information
+to output. Information is generated in a predicate-argument structure to
+either the screen or a specified file. </p>
+   
+<p><u>Spanish dependency parser:</u> This project produced a Spanish version 
+of the Link Grammar Parser written in the Spanish language.&nbsp; Various 
+knowledge sources were developed for Spanish: a grammar file containing rules 
+for linking words together, several lexicon files containing lexical information, 
+and&nbsp; syntactic and morphological constituency files. The system is capable 
+of processing a wide array of syntactic constructions in Spanish. </p>
+   
+<p><u>Word sense disambiguation through analogical modeling:</u> This project 
+was the first attempt to perform word sense disambiguation using Skousen's 
+analogical language modeling technique. Two types of featural information 
+were used in the exemplar instance vectors: collocational features (including 
+part-of-speech and lexical information) and cooccurrence features (including 
+content word lexical semantic information). Using publicly available sources 
+including Senseval 2, WordNet and Semcor, a vector building engine written 
+in Perl created input exemplars for the system. Several experiments with varying
+feature vector composition were performed and compared with psycholinguistic 
+ experiments describing results from human subjects. </p>
+    
+<p><u>Classification of Russian documents:</u> This project built a text categorization
+ engine for handing Russian documents. The first step involved localizing
+the campus computing environment for working with Cyrillic text and programs.
+ Then a part-of-speech tagger was built for Russian, which performed word
+lookup of some 32,000 tagged words using a directed acyclic word graph. Then
+a finite-state machine was implemented to perform a shallow parse on the
+text, extracting all of the noun phrases. The terminology and vocabulary
+could thus be compared between documents for assessment of topical content.
+The system was used to classify and discriminate between such Russian documents
+as novels (e.g. "Crime and Punishment"), conference talks (translations of
+LDS General Conference), and web documents discussing historical topics (e.g.
+Vladivostok in past wars).<br>
+ <br>
+ <u>Forced alignment of Conference proceedings:</u> This project combined 
+several tools and resources to assure forced alignment of LDS General Conference 
+talks. The resulting index of marked-up information maps English source audio 
+files of conference talks with their transcripts, both available for download 
+from a web site. After appropriate audio file conversions, the input is sent 
+through the Sphinx-3.3 decoder to generate an output transcription. A text 
+transcription is generated based on language models and a pronunciation dictionary 
+provided with the system. An alternative method, forced alignment, used the 
+Sphinx-II batch method and computed phoneme-level mappings that were time-aligned 
+based on utterance-specific language models and pronunciation dictionaries 
+custom-built from the correpsonding transcripts using the Sphinx Knowledge 
+Base Tool. The resulting index and markup will be useful in training of (simultaneous) 
+interpreters.<br>
+ </p>
+ 
+<p><u>Parsing Latin with PC-PATR:</u> This project built and implemented a
+morphosyntactic parser for Latin. The PC-Parse package was used for the linguistic
+processing engine, including PC-Kimmo (a finite-state morphological processor)
+and PC-Patr (a context-free unification-based parser). A 16,000-term public
+domain dictionary was integrated into the morphological processor's lexicon
+substructure, and several two-level and word-grammar rules were used along
+with some three-dozen features. The syntactic parser takes results from the
+morphological processor and, based on context-free rules, parses out whole
+utterances, allowing for Latin's very loose word order. The resulting engine
+was deployed on the web using the Apache Tomcat server and some custom-written 
+Java graphical interface code. A recursive tree-drawing algorithm graphs the
+parsed results as a PNG image.</p>
+ 
+<p><u>Portuguese Link Grammar parser:</u> This project implemented a Link 
+Grammar parser for Portuguese. Portuguese-specific knowledge sources were 
+developed: word-linkage constraints in a grammar file, and lexicon files containing
+word-specific information. Using a wider inventory of links than the English
+system does, the parser supports several types of syntactic structures in
+Portuguese.</p>
+ 
+<p><u>A two-level morphology engine for Mongolian:</u> This project involved 
+development of a morphology processor for Khalkha Mongolian, an agglutinating 
+language in the Altaic family. A lossless Romanization scheme was developed 
+for system input/output, and a lexicon was developed from a large-scale bilingual 
+dictionary. The two-level rule component assures treatment of such inflectional 
+phenomena as vowel epenthesis, use of palatalization symbols, vowel harmony, 
+and various other morphophonological processes. A test set of over 200 manually-entered 
+cases was developed to test the coverage of the system.</p>
+ 
+<p><u>A morphosyntactic parser for Persian (Farsi):</u> This project developed 
+a robust parser for Farsi, an Indo-Iranian language. A Romanization scheme 
+was developed for system input/output and lexical representation. A lexicon 
+was built from a variety of web-based and hand-developed sources. The morphological 
+parsing is done via a PC-Kimmo implementation (previously developed by the 
+same student). Results from the morphological parse are then sent to a custom 
+version of the Link Grammar parser whose English knowledge sources have been 
+entirely replaced by Farsi linguistic information (link types, link directionality, 
+lexical categories). The two systems (the morphological parser and the syntactic 
+link grammar parser) were then integrated (via custom code written in C and 
+Tcl) into the goal-directed, intelligent-agent-based, Soar cognitive modeling 
+and machine learning system. This project formed the basis for work presented by 
+the student at an international conference on Iranian linguistics.</p>
+ 
+<p><u>Word sense disambiguation using naïve Bayesian classification, 
+decision trees, and analogical modeling:</u> This project investigated the 
+word-sense disambiguation problem in the context of several different machine 
+learning approaches. Taking several hundred (and sometimes thousand) WordNet-sense-annotated 
+instances of various senses of the word "hard" from running text, vectors 
+of differing types were created with a custom-developed toolkit. These vectors 
+were used as development and test data for a variety of machine learning systems.
+Comparative results were obtained, tabulated and discussed.<br>
+ </p>
+ 
+   <p>
+ <u>Using the 
+   Levenshtein Edit Distance to perform a textual analysis of Ch’olti’</u>: 
+   This project developed a technique for mapping non-standard written forms to 
+ standardized forms, given that both inputs include the exact same words with 
+ variations in spelling and even possibly including differing word breaks and 
+ punctuation.&nbsp; One algorithm assured extraction of a sentence from the 
+ written form.&nbsp; Also used was a 
+   modified version of the Levenshtein Edit Distance that assigns different 
+ scores for matches based on the likelihood of occurrence.&nbsp; The results 
+ were very encouraging, even when entire sentences are absent from one source or 
+ the other, suggesting that the modified algorithm is particularly apt for the 
+ task. </p>
+
+ 
+   <p>
+ <u>A Chinese part-of-speech extractor:</u> This project developed a program for 
+ searching for words in Mandarin Chinese pinyin (Romanization of Chinese 
+ characters) of a certain POS defined by the user and returns the words that 
+ meet the criteria. This was achieved by implementing a Chinese version of the 
+ Link Grammar and integrating it with the Lingua::LinkParser Perl module. Certain types of words are retrieved by the Chinese POS 
+   Extractor program by applying a regular expression to the "link labels", 
+   which are returned by the Link Grammar parser when a sentence is successfully 
+   parsed. The Chinese POS Extractor consists of a dictionary file, several 
+   lexicon files (both composed in the Link Grammar format), and a Perl script 
+   that reads sentences in pinyin, searches the input, and returns the words 
+   that match the regular expression. </p>
+
+ 
+   <p align="center" style="text-align:left">
+   <span style="text-decoration:underline">Automatic Music Generation through the use of 
+   N-Grams:</span>&nbsp;The 
+   automatic generation of aesthetically pleasing melodies and harmonies is 
+   still an open problem – one which has a number of correlations to topics in 
+   the field of natural language processing.&nbsp; This project explores the 
+   generation of melodic and harmonic ideas by using a selection technique based 
+   on probability of n-gram occurrence in a corpus of midi files.&nbsp; Sample midi 
+   files are provided for evaluation and comparison. This project became the 
+   groundwork for a successful National Science Foundation Graduate Fellowship 
+   application.</p>
+   <p class="MsoNormal"><u>A Portuguese morphology engine:</u> 
+   Many tools have been developed for morphological analysis and generation. A 
+   few of these, such as the PC-KIMMO engine, have enjoyed widespread use. 
+   Recently, Xerox has released new tools based on finite state networks, which 
+   have ready application to morphological processing. This project leverages 
+   the features in two of these – <b>xfst</b> and <b>lexc</b>. These tools were used 
+   in this project to perform generation of Portuguese noun inflection and 
+   analysis/generation of Portuguese verb inflection.</p>
+   <p class="MsoNormal"><u>Spoken language identification:</u> This project 
+   resulted in the development of acoustic feature-based specifications that are 
+   useful in recognizing which language is being spoken over the telephone 
+   within 3, 10, or 30 seconds. It involved analyzing telephone speech corpora, 
+   locating interesting phonological and suprasegmental properties that give a 
+   clue to which language is being spoken (e.g. tonal contours, filled pauses, 
+   diphthongs, unique vowels and consonants), and extracting the relevant and 
+   appropriate acoustic data. A featural encoding of this data was compiled into 
+   a form that could be used by a maximum entropy classifier that combined 
+   language-independent phoneme recognition implementation of the Sphinx 
+   recognizer, and n-gram language models built with the CMU-Cambridge language 
+   modeling toolkit. The OGI telephone speech corpus and NIST speech language 
+   data evaluation corpus were used in this task which addressed several 
+   languages including English, Spanish, Chinese, Korean, and Tamil. </p>
+   <p class="MsoNormal"><u>Automatic Message Identification in Vervet Monkeys 
+	Using Machine Learning.</u>&nbsp; The purpose of this project was to create a 
+	system that automatically identified the 7 distinct messages as identified 
+	in the Talkbank Ethology Corpus: Field Recordings of vervet monkey calls.&nbsp; 
+	This was accomplished using Perl, Bash and Praat scripts to output feature 
+	vectors for use in the Timbl machine learning system.&nbsp; Over 30 sets of 
+	feature vectors were created and tested. The results were written up and 
+	presented at the the special LACUS conference on animal communication in 
+	Kentucky. It was part of the student's undergraduate ORCA project.</p>
+	<p class="MsoNormal"><u>Sphinx with CRS</u>: This project integrated CMU’s 
+	Sphinx 4 speech recognition system with the Cisco Customer Response System 
+	(CRS). Cisco CRS version 4.0(4)sr1 is used on the BYU campus. Due to expense 
+	the speech recognition software was included in the purchase. Sphinx 4 is a 
+	free open source speech recognition system that is Java. CRS allows custom 
+	Java classes to be integrated. This is project investigated and demonstrated 
+	the usefulness of integrating Sphinx with CRS.</p>
+	<p class="MsoNormal"><u>Allomorphic Prediction by Analogy of the Morphemes +ance 
+	and +ence</u>: This project developed a predictive modeling system to show 
+	which nominal allomorph suffix is used in English (ance or ence) by analogy. 
+	A custom corpus of over 1400 words from the OED was created of every 
+	instance in the OED of these morphemes. The technique used was primarily 
+	orthographic analogy modeled in Royal Skousen’s Analogical Modeling program 
+	and also TIMBL. As a check a smaller corpus from the BNC was used to test 
+	the results obtained from the OED corpus. </p>
+	<p class="MsoNormal"><u>Implementation of Named Entity Recognition and 
+	Coreference Resolution</u>:<font face="Times New Roman" size="3"> This 
+	project involved an implementation of named entity recognition. It began 
+	with the creation of a corpus from the Harold B. Lee Library’s Mormon 
+	Missionary Diary collection. The diaries, encoded in the TEI-lite mark-up 
+	standard, were processed to a corpus of files tagged for personal names, 
+	place names, organization names, dates, and for parts of speech. A maximum 
+	entropy classifier was used to identify named entities in the test files 
+	based on features extracted from the training set. The coreference 
+	resolution problem began with the MUC-7 corpus developed for this task and 
+	implemented the Luo Bell Tree (Luo et al., 2004) algorithm to identify 
+	tokens which corefer.</font></p>
+	<p class="MsoNormal"><u>Sphinx at 10 Feet: Speech Recognition in the Living 
+	Room</u>: This project involved the integration of the Sphinx speech 
+	recognition engine into a PC-based DVD annotation application, written in 
+	Visual Basic 6 (due to the need to integrate a legacy COM-based DVD 
+	controller). The addition of speech control allowed the application to be 
+	repurposed for home use, overcoming the difficulties inherent in the 
+	input-intensive segmentation process.</p>
+	<p class="MsoNormal"><u>Combinatory Categorial Grammar over the Penn Chinese 
+	Treebank</u>: This project implemented a combinatory categorial grammar (CCG) 
+	parser for Chinese, using the OpenCCG framework. Rules and lexical items 
+	were developed using the Penn Chinese Treebank for reference lexical and 
+	syntactic data.&nbsp;Focus was placed on modeling a variety of different Chinese 
+	syntactic phenomena.</p>
+	<p class="MsoNormal"><u>Forced Alignment for Elicited Imitation</u>:&nbsp; 
+	Elicited imitation (EI) is an effective speech-based testing protocol for 
+	evaluating second language oral proficiency. This project involved grading 
+	EI recordings automatically using the Sphinx speech recognizer. Forced 
+	alignment, a technique to align speech content (words, syllables, phonemes) 
+	with transcripts of the expected content, was shown to be effective in 
+	assessing proficiency, even when the speakers have noticeable 
+	foreign-accented English.</p>
+	<p class="MsoNormal"><u>Generating Mnemonic Stories for Chinese Characters:</u> 
+	Learning written Chinese characters is a daunting task, and using mnemonic 
+	stories for them has proven helpful. This project developed automatic 
+	generation of mnemonic stories for Chinese characters that exhibit: high 
+	phonetic similarity to a Mandarin target; phonetic and semantic 
+	distinctiveness from other sound names; phonetic and semantic 
+	distinctiveness from certain other words; and memorability. It involved use 
+	of Perl, CEDICT for Chinese tone syllables, CELEX for English monosyllabic 
+	lexical items, PC-Kimmo for mapping pinyin to English, Levenshtein edit 
+	distance and WordNet for calculating phonetic and semantic distance, and 
+	Heisig's Japanese character primitives.</p>
+	<p class="MsoNormal"><u>Japanese LCSVSR Performance Test</u>: This project 
+	implemented <font face="Times New Roman">&nbsp;Julius (the Japanese speech 
+	recognizer) and </font>carried out a<font face="Times New Roman"> 
+	performance test. About 70 – 80 % accuracy rate in closed and open tests was 
+	attained with a small language model newly created for this project. In 
+	comparison with the accompanied language model, the recognition rate with 
+	the model yields better results. The possibility of proceduralized language 
+	model development and a revised acoustic model were explored.</font></p>
+	<p class="MsoNormal"><font face="TimesNewRoman"><u>Creating a sentence-level 
+	syntactic, morphological and lexical feature identification program: </u>
+	This project was a Java-based framework that allows multiple NLP tools to be 
+	used at once on the same document. The tool makes use of the Stanford Parser 
+	and a Syllable Counting algorithm to identify 9 of 24 previously identified 
+	as significant features. Properties that were identified include lexical, 
+	morphological and syntactic features. The framework allows both annotation 
+	of sentences as well as the ability to parse documents. The framework 
+	integrates with a mySQL database to allow for retrieval (generation) of test 
+	items with specific characteristics.</font></p>
+	<p class="MsoNormal"><font face="TimesNewRoman"><u>Domain-Independent Data 
+	Extraction: Proper Names:</u> This project involved using the BYU Data 
+	Extraction Group's ONTOS framework for performing named-entity recognition 
+	on a corpus of web pages that constituted the WePS competition. Custom data 
+	dictionary entries were developed, the framework was extended to produce 
+	appropriately structured output, and precision/recall/F-measure metrics were 
+	used to evaluate performance of the system.</font></p>
+	<p class="MsoNormal">&nbsp;</p>
+   
+</body></html>
